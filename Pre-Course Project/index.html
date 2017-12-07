@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<!--tell the browser or user agent which version of HTML-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--set name of page description metadata to 'description', set value associated with 'name' attribute to 'Ken Hurtado Pre-course Projec'-->
+    <meta name="description" content="Ken Hurtado Pre-course Project">
+    <title>Ken's: Pre-Course Project</title>
+    <!--link css, relationship is stylesheet-->
+    <link href="_css/styles.css" rel="stylesheet" type="text/css">
+    
+    <script>
+    function validate(form) {
+        var radioButtons = form.radSuit;
+        var radioChosen = false;
+            for (var i=0; i<radioButtons.length; i++) {
+                if (radioButtons[i].checked) {
+                    radioChosen=true;
+                    returnValue=true;
+                }
+            }
+        
+        if (radioChosen == false) {
+            returnValue = false;
+            alert("You did not select a suit of cards");
+        }
+        return Value;
+    }
+    </script>
+    
+</head>
+    
+    <body>
+        <form name="frmCards" action="cards.aspx" method="post"
+              onsubmit="return validateForm(this)" >
+            <p>Please select a suit of cards.</p>
+            <p><input type="radio" name="radSuit" value="hearts" /> Hearts</p>
+            <p><input type="radio" name="radSuit" value="diamonds" /> Diamonds</p>
+            <p><input type="radio" name="radSuit" value="spades" /> Spades</p>
+            <p><input type="radio" name="radSuit" value="clubs" /> Clubs</p>
+            <p><input type="submit" value="Submit choice" /></p>
+        </form>
+</body>
+
+</html>
