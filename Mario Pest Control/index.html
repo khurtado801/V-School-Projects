@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mario Pest Control</title>
+</head>
+
+<body onload="total()">
+    <header>
+        <h1>Mario Pest Control</h1>
+    </header>
+    <ul id="baddies-container">
+        <li class="baddies">
+            <div id="enemyName">
+                <h2>Bob-ombs</h2>
+            </div>
+            <img src="images/bob-omb.png" alt="Bob-omb">
+            <p>Total Caught: <input id="bobombInput" type="number"></p><br>
+            <p>Total Price: <br><span id="bobombTotal"></span></p>
+        </li>
+        <li class="baddies">
+            <div id="enemyName">
+                <h2>Cheep-cheeps</h2>
+            </div>
+            <img src="images/cheep-cheep.png" alt="Cheep-cheep">
+
+            <p>Total Caught: <input id="cheepInput" type="number"></p><br>
+            <p>Total Price: <br><span id="cheepTotal"></span></p>
+        </li>
+        <li class="baddies">
+            <div id="enemyName">
+                <h2>Goombas</h2>
+            </div>
+            <img id="goomba" src="images/goomba.png" alt="Goomba">
+            <p>Total Caught: <input type="number" id="goombaInput"></p><br>
+            <p>Total Price: <br><span id="goombaTotal"></span></p>
+        </li>
+    </ul>
+    <h2 id="totals">Total price for total baddies caught:<br><span id="subtotal"></span></h2>
+    <footer>
+        <ul id="footer">
+            <li class="marioFtr">
+                <a href="mailto:italian.stallion@nintendo.com">italian.stallion@nintendo.com</a>
+            </li>
+            <li class="marioFtr"><a href="https://www.nintendo.com/" target="https://www.nintendo.com/">www.nintendo.com</a></li>
+            <li class="marioFtr"><a href="https://goo.gl/maps/5vT3rdq7MQz>">10236 Charing Cross Road, LA</a></li>
+        </ul>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

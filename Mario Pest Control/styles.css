@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    /*height: 100%;*/
+    font-family: 'Fontdiner Swanky', cursive;
+    background-image: url(images/mario_background.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0;
+    color: white;
+    background: rgb(54, 25, 25);
+    /* Fall-back for browsers that don't
+                                    support rgba */
+    background: rgba(54, 25, 25, .5);
+    border-radius: 12px;
+    border-radius: 12px;
+    border-radius: 12px;
+    border-top: black 1px solid;
+    border-left: black 3px solid;
+    border-bottom: black 5px solid;
+}
+
+h2 {
+    margin-bottom: 30px;
+    color: white;
+}
+
+img {
+    position: relative;
+    width: 150px;
+    height: auto;
+}
+
+#baddies-container {
+    display: flex;
+    padding-top: 35px;
+    margin: auto 0;
+}
+
+.baddies {
+    text-align: center;
+    display: inline-block;
+    width: 25%;
+    padding: 20px;
+}
+
+#enemyName {
+    background: rgb(54, 25, 25);
+    /* Fall-back for browsers that don't
+                                support rgba */
+    background: rgba(54, 25, 25, .5);
+    border-radius: 12px;
+    border-radius: 12px;
+    border-radius: 12px;
+    border-top: black 1px solid;
+    border-left: black 3px solid;
+    border-bottom: black 5px solid;
+}
+
+@media(max-width: 768px) {
+    .baddies {
+        position: block;
+        width: 100%;
+    }
+}
+
+p {
+    font-size: 24px;
+}
+
+#textBox {
+    background: rgb(54, 25, 25);
+    /* Fall-back for browsers that don't
+                                    support rgba */
+    background: rgba(54, 25, 25, .5);
+    border-radius: 12px;
+    border-radius: 12px;
+    border-radius: 12px;
+    border-top: black 1px solid;
+    border-left: black 3px solid;
+    border-bottom: black 5px solid;
+}
+
+#totals {
+    text-align: center;
+    padding-top: 60px;
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    width: 100vw;
+    height: 25px;
+    position: fixed;
+    bottom: 0;
+    background-color: #5b941b;
+}
+
+#footer {
+    text-align: center;
+}
+
+.marioFtr {
+    text-align: center;
+    display: inline-block;
+    max-width: 500px;
+    line-height: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+a {
+    color: blue;
+}
