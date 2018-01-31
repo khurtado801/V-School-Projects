@@ -1,0 +1,58 @@
+.search-wrapper {
+    background: linear-gradient(ivory, white);
+}
+
+h1 {
+    margin-left: 20px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+}
+
+.wrapper {
+    /* border-top: black 1px solid;
+    border-left: black 3px solid;
+    border-right: black 3px solid;
+    border-bottom: black 5px solid;
+    border-radius: 12px;
+    border-radius: 12px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0 5px 10px rgb(12, 11, 11);
+    -moz-box-shadow: 0 5px 10px rgb(10, 10, 10);
+    box-shadow: 0 5px 10px rgb(7, 7, 7); */
+    color: #8e8c8c;
+    font-size: 21px;
+    margin-left: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h2 {
+    color: #a9a9a9;
+    margin-left: 20px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 2px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 80px;
+    font-weight: 800, 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px;
+}
+
+.checklist {
+    margin-left: 40px;
+    background-color: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255, 255, 255, 0.5) 1px 3px 3px;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 9px 10px rgba(0, 0, 0, 0.1);
+}
+
+.para {
+    color: #8e8c8c;
+    margin-left: 40px;
+    font-size: 22px;
+    background-color: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255, 255, 255, 0.5) 1px 3px 3px;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 9px 10px rgba(0, 0, 0, 0.1);
+}

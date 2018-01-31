@@ -1,0 +1,10 @@
+.footer-wrapper:after {
+    content: "";
+    display: block;
+    /* height: 150px; */
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 17%; */
+    min-height: 200px;
+    background: linear-gradient(ivory, rgb(121, 121, 121));
+}

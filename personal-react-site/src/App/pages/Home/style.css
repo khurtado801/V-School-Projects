@@ -1,0 +1,62 @@
+.wrapper {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: solid 1px black;
+    border-radius: 12px;
+    border-radius: 12px;
+    border-radius: 12px;
+    border-top: black 1px solid;
+    border-left: black 3px solid;
+    border-right: black 3px solid;
+    border-bottom: black 5px solid;
+    -webkit-box-shadow: 0 5px 10px #aaa;
+    -moz-box-shadow: 0 5px 10px #aaa;
+    box-shadow: 0 5px 10px #aaa;
+    background: linear-gradient(ivory, white);
+}
+
+#welcome {
+    text-align: center;
+}
+
+body {
+    color: black;
+    font-family: Open sans;
+}
+
+.sceneIntro {
+    border: 0px;
+}
+
+.wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    position: relative;
+    perspective: 500px;
+    top: 50%;
+    padding: 0 20px;
+    transform: translateY(-50%);
+    font-weight: 300;
+}
+
+ul li {
+    font-size: 20px;
+    background-color: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255, 255, 255, 0.5) 1px 3px 3px;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 9px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-left: 40px;
+    color: #767676;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 800, 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px;
+}
