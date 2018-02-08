@@ -1,0 +1,24 @@
+{
+  "name": "first-fullstack-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.3",
+    "mongoose-regex": "0.0.2",
+    "mongoose-regex-search": "^0.4.0",
+    "mongoose-search-plugin": "^0.1.2",
+    "mongoose-text-search": "0.0.2",
+    "nodemon": "^1.14.12"
+  }
+}

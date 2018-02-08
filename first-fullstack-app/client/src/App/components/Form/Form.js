@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 
-import Modules from '../../pages/Modules/Modules.js';
-
 class Form extends Component {
     constructor(props) {
         super(props);
@@ -16,6 +14,7 @@ class Form extends Component {
         }
         this.handleChange = this.handleChange.bind(this);
         this.clearInputs = this.clearInputs.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange = (e) => {
@@ -50,15 +49,21 @@ class Form extends Component {
             this.props.submit(this.state.inputs)
         } else {
             this.props.submit(this.state.inputs, id);
+            // call toggle display function here
         }
     }
 
+    // MyModel.find({$text: {$search: searchString}})
+    //    .skip(20)
+    //    .limit(10)
+    //    .exec(function(err, docs) { ... });
+
     render () {
-        // Deconstruct this.state.inputs
+        // Deconstruct inputs
         let {title, operation, manufacturer, size, powerConsumption} = this.state.inputs;
         return (
             <div>
-                <form aclassName="form-wrapper" onSubmit={this.handleSubmit}>
+                <form className="form-wrapper" onSubmit={this.handleSubmit}>
                 <h1>Submit a module...</h1>
                 <label>Title: </label>
                     <input onChange={this.handleChange} className="title" value={title} name="title" type="text" placeholder="Title" />
@@ -66,6 +71,7 @@ class Form extends Component {
                     <input onChange={this.handleChange} className="operation" value={operation} name="operation" type="text" placeholder="Operation" />
                 <label>Manufacturer: </label>
                     <input onChange={this.handleChange} className="manufacturer" value={manufacturer} name="manufacturer" type="text" placeholder="Manufacturer" />
+                {/* HP = horizontal pitch, where 1HP = 5.08mm */}
                 <label>Size: </label>
                     <input onChange={this.handleChange} className="size" value={size} name="size" type="text" placeholder="Size" />
                 <label>Power Consumption: </label>

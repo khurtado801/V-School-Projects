@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 
+import SearchForm from '../../SearchForm/SearchForm.js';
+
 class RightSideBar extends Component {
     render () {
         return (
             <div>
-                asfdds fas fsd fsd fasd fsda fsad fsda fasd dfgs fdg sdfg sfd gsd g dsgdfgdfsdaasdf dgs gdfsgdfgs fdsgfgsdfg
+                <SearchForm/>
             </div>
         )
     }

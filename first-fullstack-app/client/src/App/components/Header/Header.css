@@ -1,4 +1,7 @@
+
+
 .header-wrapper {
+    height: 865%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: linear-gradient(rgb(130, 129, 129), lightgray);
+    background: linear-gradient(ivory, rgb(223, 222, 222));;
 }

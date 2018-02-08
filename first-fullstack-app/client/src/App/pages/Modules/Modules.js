@@ -6,6 +6,8 @@ import Loading from '../../../shared/Loading.js';
 import Form from '../../components/Form/Form.js'
 import Module from './Module/Module.js';
 
+import '../Modules/Modules.css'
+
 class Modules extends Component {
     constructor(props) {
         super(props);
@@ -15,6 +17,8 @@ class Modules extends Component {
         };
         this.formSubmit = this.formSubmit.bind(this);
         this.moduleDelete = this.moduleDelete.bind(this);
+        this.moduleEdit = this.moduleEdit.bind(this);
+        // this.toggleDisplay = this.toggleDisplay.bind(this);
     }
     componentDidMount(){
         console.log("GET request");
@@ -29,7 +33,7 @@ class Modules extends Component {
         .catch((err) => {
             console.error(err);
             this.setState({
-                votes: [],
+                modules: [],
                 loading: false
             })
         })
@@ -37,13 +41,15 @@ class Modules extends Component {
 
     formSubmit(newModule) {
         // POST request to local db
+        console.log('formSubmit first step')
         axios.post("/module", newModule)
         // Promise
         .then((response) => {
             this.setState(prevState => {
                 let {modules} = prevState;
+                console.log('formSubmit second step')
                 return {
-                    modules: [...modules, response.data]
+                    modules: [...modules, response.data.data]
                 }
             })
         })
@@ -53,15 +59,18 @@ class Modules extends Component {
     }
 
     moduleDelete(id) {
+        console.log('moduleDelete first step');
         // Set module object state to current
         let {modules} = this.state;
         // Send delete request to local db at /module containing id
-        axios.delete("/module" + id)
+        axios.delete("/module/" + id)
         // Promise - if connection is established
         .then(response => {
+            console.log('moduleDelete second step');
             // Set current state
             this.setState({
                 modules: modules.filter((module, index) => {
+                    console.log('moduleDelete third step');
                     return module._id !== id
                 }),
                 loading: false
@@ -71,9 +80,32 @@ class Modules extends Component {
             console.error(err);
         });
     }
+    moduleEdit(updatedModule, id){
+        //make your put request
+        axios.put("/module/" + id, updatedModule)
+        // Promise - if connection is established
+        .then(response => {
+            // let {data} = response.data;
+            console.log(response.data)
+            this.setState((prevState) => {
+                return {
+                    modules: this.state.modules.map((module) => {
+                        if (module._id === id) {
+                            return response.data.data;
+                        } else {
+                            return module
+                        }
+                    })
+                }
+                // loading: false
+            })
+        })
+    }
 
     render () {
-        // Set vote object state to current state
+        const fullModules = this.state;
+        console.log(fullModules);
+        // Set module object state to current state
         let {modules, loading} = this.state;
                 return (
                     loading ?
@@ -81,9 +113,9 @@ class Modules extends Component {
                         :
                         <div className="modules-wrapper">
                             <Form add submit={this.formSubmit}></Form>
+                            
                             {modules.map((module, index) => {
-                                {/* return <Vote {...votes} key={index} voteDelete={this.voteDelete} voteEdit={this.voteEdit}></Vote>; */}
-                                return <Module {...module} key={index} moduleDelete={this.moduleDelete}></Module>;
+                                return <Module {...module} key={index} moduleDelete={this.moduleDelete} moduleEdit={this.moduleEdit}></Module>
                             })}
                         </div>
                 )
