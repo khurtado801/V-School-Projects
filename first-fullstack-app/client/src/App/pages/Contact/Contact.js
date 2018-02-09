@@ -5,7 +5,7 @@ import "./Contact.css";
 function Contact() {
     return (
         <div>
-        <h2>You got something to say about it...</h2>
+        <h1>You got something to say about it...</h1>
             <form className="form-style-9">
                 <ul>
                     <li>
@@ -23,7 +23,8 @@ function Contact() {
                         <textarea name="field5" className="field-style" placeholder="Message"></textarea>
                     </li>
                     <li>
-                        <input type="submit" value="Send Message" />
+                        {/* <input type="submit" value="Send Message" /> */}
+                        <button type="submit">Send Message</button>
                     </li>
                 </ul>
             </form>

@@ -3,8 +3,10 @@ import axios from 'axios';
 
 import Loading from '../../../shared/Loading.js';
 
-import Form from '../../components/Form/Form.js'
+import ModulesForm from '../../components/ModulesForm/ModulesForm.js';
+// import Form from '../../components/Form/Form.js'
 import Module from './Module/Module.js';
+import SearchForm from '../../components/SearchForm/SearchForm.js';
 
 import '../Modules/Modules.css'
 
@@ -13,11 +15,15 @@ class Modules extends Component {
         super(props);
         this.state = {
             modules: [],
-            loading: true
+            loading: true,
+            searchTerm: ''
         };
         this.formSubmit = this.formSubmit.bind(this);
         this.moduleDelete = this.moduleDelete.bind(this);
         this.moduleEdit = this.moduleEdit.bind(this);
+        this.setSearchTerm = this.setSearchTerm.bind(this);
+        // this.clearSearch = this.clearSearch.bind(this);
+        
         // this.toggleDisplay = this.toggleDisplay.bind(this);
     }
     componentDidMount(){
@@ -38,6 +44,17 @@ class Modules extends Component {
             })
         })
     }
+    setSearchTerm(searchTerm){
+        this.setState({
+            searchTerm
+        })
+    }
+
+    // clearSearch() {
+    //     this.setState({
+    //         searchTerm: ''
+    //     })
+    // }
 
     formSubmit(newModule) {
         // POST request to local db
@@ -106,17 +123,24 @@ class Modules extends Component {
         const fullModules = this.state;
         console.log(fullModules);
         // Set module object state to current state
-        let {modules, loading} = this.state;
+        let {modules, loading, searchTerm} = this.state;
+        console.log(searchTerm);
                 return (
                     loading ?
                         <Loading />
                         :
-                        <div className="modules-wrapper">
-                            <Form add submit={this.formSubmit}></Form>
-                            
-                            {modules.map((module, index) => {
-                                return <Module {...module} key={index} moduleDelete={this.moduleDelete} moduleEdit={this.moduleEdit}></Module>
-                            })}
+                        <div>
+                         <SearchForm submit={this.setSearchTerm} />
+                            <div className="modules-wrapper">
+                                <ModulesForm add submit={this.formSubmit} ></ModulesForm>
+
+                                {modules.filter(module=>{
+                                    //only return true of the search term somehow matches the module
+                                    return module.title.toLowerCase().includes(searchTerm);
+                                }).map((module, index) => {
+                                    return <Module {...module} key={index} moduleDelete={this.moduleDelete} moduleEdit={this.moduleEdit}></Module>
+                                })}
+                            </div>
                         </div>
                 )
     }

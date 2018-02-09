@@ -1,23 +1,37 @@
 
-
 .hg_header {
     grid-area: header;
+    background-color: rgba(255, 0, 0, 0.1);
+    background: linear-gradient(ivory, rgb(223, 222, 222));
+	font-size: 1rem;
+	font-weight: 700;
+	font-style: italic;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    text-align: center;
+    
 }
 
 .hg_footer {
     grid-area: footer;
+    background: linear-gradient(rgb(152, 151, 151), rgb(108, 107, 107))
 }
 
 .hg_main{
     grid-area: main;
+    background: linear-gradient(rgb(223, 222, 222), rgb(152, 151, 151));
 }
 
 .hg_left {
     grid-area: leftSideBar;
+    background: linear-gradient(rgb(223, 222, 222), rgb(152, 151, 151))
 }
 
 .hg_right {
     grid-area: rightSideBar;
+    background: linear-gradient(rgb(223, 222, 222), rgb(152, 151, 151))
 }
 
 .hg {
@@ -47,3 +61,49 @@
                             30px;
     }
 }
+
+button {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 11px system-ui;
+    cursor:pointer;
+    font-family:Arial, Helvetica, sans-serif;
+  font-size:12px;
+  text-align: center;
+  background-image: -moz-linear-gradient(rgba(0, 81, 255, 0.749),rgba(0, 103, 213, 0.762));
+  background-image: -ms-linear-gradient(rgba(0, 94, 255, 0.735),rgba(0, 103, 213, 0.708));
+  background-image: -o-linear-gradient(rgba(0, 123, 255, 0.687),rgba(0, 78, 213, 0.742));
+  background-image: -webkit-linear-gradient(rgba(0, 145, 255, 0.81),rgba(0, 114, 213, 0.735));
+  background-image: linear-gradient(rgba(0, 115, 255, 0.667),rgba(1, 14, 57, 0.564));
+  color: white;
+  text-shadow: 0 0 2px rgb(0,86,119);
+  border: 1px solid rgb(0,129,178);
+  border-radius: 4px;
+  margin: 5px;
+}
+
+
+
+
+
+  
+
+  

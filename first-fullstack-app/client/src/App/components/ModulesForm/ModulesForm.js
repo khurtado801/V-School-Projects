@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 
-class Form extends Component {
+import "./ModulesForm.css";
+
+class ModulesForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -63,24 +65,25 @@ class Form extends Component {
         let {title, operation, manufacturer, size, powerConsumption} = this.state.inputs;
         return (
             <div>
-                <form className="form-wrapper" onSubmit={this.handleSubmit}>
-                <h1>Submit a module...</h1>
-                <label>Title: </label>
-                    <input onChange={this.handleChange} className="title" value={title} name="title" type="text" placeholder="Title" />
-                <label>Operation: </label>
-                    <input onChange={this.handleChange} className="operation" value={operation} name="operation" type="text" placeholder="Operation" />
-                <label>Manufacturer: </label>
-                    <input onChange={this.handleChange} className="manufacturer" value={manufacturer} name="manufacturer" type="text" placeholder="Manufacturer" />
-                {/* HP = horizontal pitch, where 1HP = 5.08mm */}
-                <label>Size: </label>
-                    <input onChange={this.handleChange} className="size" value={size} name="size" type="text" placeholder="Size" />
-                <label>Power Consumption: </label>
-                    <input onChange={this.handleChange} className="powerConsumption" value={powerConsumption} name="powerConsumption" type="text" placeholder="Power Consumption" />
-                <button className="submit" type="submit" >Submit</button>
+                <form className="form-wrapper form-style-9" onSubmit={this.handleSubmit}>
+                <h2>Submit a module...</h2>
+                    <ul>
+                        <li>
+                            <input onChange={this.handleChange} className="title field-style field-split align-left" value={title} type="text" name="title" placeholder="Title" />
+                            <input onChange={this.handleChange} className="operation field-style field-split align-right" value={operation} type="text" name="operation" placeholder="Operation" />
+                        </li>
+                        <li>
+                            <input onChange={this.handleChange} className="manufacturer field-style field-split align-left" value={manufacturer} type="text" name="manufacturer" placeholder="Manufacturer" />
+                            <input onChange={this.handleChange} className="size field-style field-split align-right" value={size} type="text" name="size" placeholder="Size" />
+                        </li>
+                        <li>
+                            <button className="submit" type="submit">Submit</button>
+                        </li>
+                    </ul>
                 </form>
             </div>
-        );
+        )
     }
 }
 
-export default Form
+export default ModulesForm

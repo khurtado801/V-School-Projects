@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
-import { Nav, NavItem} from 'reactstrap';
-
+import { Nav, NavItem} from 'reactstrap';   
 
 class LeftSideBar extends Component {
     render () {
@@ -12,6 +11,9 @@ class LeftSideBar extends Component {
                         <Nav pills>
                             <NavItem>
                                 <Link to="/">Home</Link>
+                            </NavItem>
+                            <NavItem>
+                                <Link to="/modules">Search</Link>
                             </NavItem>
                             <NavItem>
                                 <Link to="/contact">Contact</Link>

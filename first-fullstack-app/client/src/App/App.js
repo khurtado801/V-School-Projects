@@ -7,6 +7,7 @@ import RightSideBar from './components/SideBars/RightSideBar/RightSideBar.js'
 // import Main from './components/Main/Main.js';
 import Footer from './components/Footer/Footer.js';
 
+import Home from './pages/Home/Home.js';
 import Modules from './pages/Modules/Modules.js';
 import Contact from './pages/Contact/Contact.js';
 
@@ -29,7 +30,8 @@ class App extends Component {
                     </div>
                     <div className='hg_main'>
                         <Switch>
-                            <Route exact path='/' component={Modules} />
+                            <Route exact path='/' component={Home} />
+                            <Route path="/modules" component={Modules} />
                             <Route path="/contact" component={Contact} />
                         </Switch>
                     </div>

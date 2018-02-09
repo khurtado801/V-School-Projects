@@ -1,3 +1,4 @@
+
 .form-style-9 ul {
     padding: 0;
     margin: 0;
@@ -17,6 +18,10 @@
     padding: 8px;
     outline: none;
     border: 1px solid #B0CFE0;
+    /* -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out; */
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     border-radius: 10px;
@@ -32,8 +37,8 @@
     width: 29%;
 }
 
-.form-style-9 ul li .field-full {
-    width: 58.5%;
+.powerConsumption form-style-9 ul li .field-full {
+    width: 10%;
 }
 
 .form-style-9 ul li input.align-left {

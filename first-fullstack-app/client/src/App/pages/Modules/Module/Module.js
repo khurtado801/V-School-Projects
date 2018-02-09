@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 
-import Form from '../../../components/Form/Form.js';
+import ModulesForm from '../../../components/ModulesForm/ModulesForm.js';
 import Loading from "../../../../shared/Loading.js";
+import SearchForm from '../../../components/SearchForm/SearchForm.js';
+
+// import SearchForm from '../../../pages/Modules/Module/TestSearch/SearchForm.js';
 
 import './Module.css';
 
@@ -24,29 +27,27 @@ class Module extends Component {
         })
     }
 
-
     render () {
-        console.log(this.props);
-        
         let {title, operation, manufacturer, size, powerConsumption, moduleDelete, moduleEdit, loading, _id} = this.props;
-
         return (
             loading ?
             <Loading />
             :
             <div className="module-wrapper">
                 <div className="info-display-wrapper">
-                    <p className="title">Title: {title}</p>
-                    <p className="operation">Operation: {operation}</p>
-                    <p className="manufacturer">Manufacturer: {manufacturer}</p>
-                    <p className="size">Size: {size}</p>
-                    <p className="powerConsumption">Power Consumption: {powerConsumption}</p>
-                    <fieldset>
+                    <div className="title">Title: {title} </div>
+                    <div className="operation">Operation: {operation}</div>
+                    <div className="manufacturer">Manufacturer: {manufacturer}</div>
+                    <div className="size">Size: {size}</div>
+                    <div className="powerConsumption">Power Consumption: {powerConsumption}</div>
+
+                    <div className="buttons">
                         <button className='delete' type='button' onClick={() => {moduleDelete(_id)}}>X</button>
                         <button className='edit' type='button' onClick={this.toggleDisplay}>Edit</button>
-                    </fieldset>
+                    </div>
+
                     <div style ={{display: this.state.isEditing ? 'initial' : 'none'}}>
-                        <Form submit={moduleEdit} id={_id}></Form>
+                        <ModulesForm submit={moduleEdit} id={_id}></ModulesForm>
                     </div>
                 </div>
             </div>
