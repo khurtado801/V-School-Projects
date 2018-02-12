@@ -5,7 +5,9 @@ import "./Contact.css";
 function Contact() {
     return (
         <div>
-        <h1>You got something to say about it...</h1>
+        <div className="contact-header">
+            <p>You got something to say....contact me</p>
+        </div>
             <form className="form-style-9">
                 <ul>
                     <li>

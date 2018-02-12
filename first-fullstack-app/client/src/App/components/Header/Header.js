@@ -1,14 +1,32 @@
-import React from "react";
-// import NavbarComponent from "../Header/NavComponent";
-// import {Link} from "react-router-dom";
+import React, { Component } from 'react'
+import {Link} from 'react-router-dom';
+import { Nav, NavItem} from 'reactstrap';  
 
-// import "./style.css";
 import './Header.css';
+import homeIcon from '../../../images/home8small.png'
+import emailIcon from '../../../images/email8.png';
+
 
 function Header(props) {
+    const email = ''
     return (
-        <div className="header-wrapper">
-            <h2>All sorts of header shit is going to be up in here. Mad header shit in fact!! Like shit that the sheeple will love!</h2>
+        <div className="main-header-wrapper">
+            <div>
+                <div className="nav">
+                    <div className="header-links">
+                        <div className="nav-items-wrapper">
+                            <ul className="header-items">
+                                <li>
+                                    <Link to="/modules">Modules</Link>
+                                </li>
+                                <li>
+                                    <Link to="/contact">Contact</Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

@@ -10,7 +10,6 @@ class SearchForm extends Component {
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.clearSearch = this.clearSearch.bind(this);
         this.clearDefaults = this.clearDefaults.bind(this);
     }
     //write handle Change function
@@ -32,7 +31,7 @@ class SearchForm extends Component {
 
     clearDefaults(e) {
         let {value} = e.target;
-        this.props.SearchForm;
+        this.props.clearSearch();
         this.setState({
             searchTerm: ''
         })
@@ -40,21 +39,31 @@ class SearchForm extends Component {
 
     render() {
         let { searchTerm } = this.state;
+        let {clearSearch} = this.props;
         return (
-            <div>
-                <h1>Search for a module...</h1>
-                <div className="form-style-3 field-style">
-                    <form onSubmit={this.handleSubmit}>
-                        <fieldset>
-                            <label>
-                                {/* <input onChange={this.handleChange} value={artistQuery} name="artist" type="text" /> */}
-                                <input onChange={this.handleChange} value={searchTerm} name="searchTerm" type="text" placeholder="Search" />
-                                <button type="submit">Search</button>
-                                <button onClick={this.clearDefaults} type="button">Clear</button>
-                            </label>
-                        </fieldset>
-                    </form>
+            <div className='search-modules-wrapper'>
+                <div className="search-info-display-wrapper">
+                {/* Search for a module */}
+                    <div className="search-module-info">
+                        <form onSubmit={this.handleSubmit}>
+                            {/* <fieldset> */}
+                                {/* Search for a module */}
+
+                                        {/* <input onChange={this.handleChange} value={artistQuery} name="artist" type="text" /> */}
+                                        <input onChange={this.handleChange} value={searchTerm} name="searchTerm" type="text" placeholder="Search" />
+                                        {/* <div className="buttons-wrapper">
+                                            <button type="submit">Submit Search</button>
+                                            <button onClick={this.clearDefaults} type="button">Clear Search</button>
+                                        </div> */}
+
+                            {/* </fieldset> */}
+                        </form>
+                    </div>
                 </div>
+                <div className="buttons-wrapper">
+                                            <button type="submit">Submit Search</button>
+                                            <button onClick={this.clearDefaults} type="button">Clear Search</button>
+                                        </div>
             </div>
         )
     }

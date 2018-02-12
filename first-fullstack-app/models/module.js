@@ -20,7 +20,10 @@ const moduleSchema = new mongoose.Schema({
     size: {
         type: String
     },
-    powerConsumption: {
+    imgUrl: {
+        type: String
+    },
+    caption: {
         type: String
     }
 });
@@ -28,11 +31,5 @@ const moduleSchema = new mongoose.Schema({
 moduleSchema.plugin(searchPlugin, {
     fields: ['title', 'operation', 'manufacturer' ]
 });
-
-
-
-// moduleSchema.index({'$**': 'text'});
-
-
 
 module.exports = mongoose.model('Module', moduleSchema);

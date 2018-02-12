@@ -8,7 +8,7 @@ class LeftSideBar extends Component {
             <div>
                 <div className="links">
                     <div className="Nav">
-                        <Nav pills>
+                        {/* <Nav pills>
                             <NavItem>
                                 <Link to="/">Home</Link>
                             </NavItem>
@@ -18,7 +18,7 @@ class LeftSideBar extends Component {
                             <NavItem>
                                 <Link to="/contact">Contact</Link>
                             </NavItem>
-                        </Nav>
+                        </Nav> */}
                     </div>
                 </div>
             </div>

@@ -3,11 +3,13 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    width: 750px;
+    
 }
 
 .form-style-9 ul li {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     min-height: 35px;
 }
 
@@ -15,13 +17,9 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    padding: 8px;
+    padding: 2px;
     outline: none;
     border: 1px solid #B0CFE0;
-    /* -webkit-transition: all 0.30s ease-in-out;
-    -moz-transition: all 0.30s ease-in-out;
-    -ms-transition: all 0.30s ease-in-out;
-    -o-transition: all 0.30s ease-in-out; */
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     border-radius: 10px;
@@ -50,11 +48,6 @@
     float: left;
 }
 
-.form-style-9 ul li textarea {
-    width: 58%;
-    height: 100px;
-}
-
 .form-style-9 ul li input[type="button"],
 .form-style-9 ul li input[type="submit"] {
     -moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
@@ -74,4 +67,17 @@
 .form-style-9 ul li input[type="submit"]:hover {
     background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
     background-color: #28739E;
+}
+
+.addModule-button-wrapper {
+    position: relative;
+    width: 25%;
+    padding: 1px;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin-top: 1%;
+    margin-bottom: 2%;
 }

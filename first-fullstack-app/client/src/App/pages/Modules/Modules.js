@@ -6,6 +6,7 @@ import Loading from '../../../shared/Loading.js';
 import ModulesForm from '../../components/ModulesForm/ModulesForm.js';
 // import Form from '../../components/Form/Form.js'
 import Module from './Module/Module.js';
+import AddModuleHeader from '../../components/componentHeaders/AddModuleHeader/AddModuleHeader';
 import SearchForm from '../../components/SearchForm/SearchForm.js';
 
 import '../Modules/Modules.css'
@@ -22,10 +23,9 @@ class Modules extends Component {
         this.moduleDelete = this.moduleDelete.bind(this);
         this.moduleEdit = this.moduleEdit.bind(this);
         this.setSearchTerm = this.setSearchTerm.bind(this);
-        // this.clearSearch = this.clearSearch.bind(this);
-        
-        // this.toggleDisplay = this.toggleDisplay.bind(this);
+        this.clearSearch = this.clearSearch.bind(this);
     }
+
     componentDidMount(){
         console.log("GET request");
         axios.get("/module")
@@ -44,21 +44,21 @@ class Modules extends Component {
             })
         })
     }
+
     setSearchTerm(searchTerm){
         this.setState({
             searchTerm
         })
     }
 
-    // clearSearch() {
-    //     this.setState({
-    //         searchTerm: ''
-    //     })
-    // }
+    clearSearch() {
+        this.setState({
+            searchTerm: ''
+        })
+    }
 
     formSubmit(newModule) {
         // POST request to local db
-        console.log('formSubmit first step')
         axios.post("/module", newModule)
         // Promise
         .then((response) => {
@@ -120,18 +120,19 @@ class Modules extends Component {
     }
 
     render () {
-        const fullModules = this.state;
-        console.log(fullModules);
         // Set module object state to current state
         let {modules, loading, searchTerm} = this.state;
-        console.log(searchTerm);
                 return (
                     loading ?
                         <Loading />
                         :
                         <div>
-                         <SearchForm submit={this.setSearchTerm} />
+                        {/* <AddModuleHeader /> */}
+                         {/* <SearchForm submit={this.setSearchTerm} clearSearch={this.clearSearch}/> */}
                             <div className="modules-wrapper">
+                            
+                                {/* <ModulesForm add submit={this.formSubmit} ></ModulesForm> */}
+                                <SearchForm submit={this.setSearchTerm} clearSearch={this.clearSearch}/>
                                 <ModulesForm add submit={this.formSubmit} ></ModulesForm>
 
                                 {modules.filter(module=>{
@@ -140,6 +141,7 @@ class Modules extends Component {
                                 }).map((module, index) => {
                                     return <Module {...module} key={index} moduleDelete={this.moduleDelete} moduleEdit={this.moduleEdit}></Module>
                                 })}
+                                
                             </div>
                         </div>
                 )

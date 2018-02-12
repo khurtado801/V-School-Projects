@@ -1,0 +1,20 @@
+.right-side-wrapper {
+    padding-top: 100px;
+    padding-left: 10px;
+    width: 75%;
+    position: relative;
+    color: ivory;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 1em;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.879);
+}
+
+.right-side-items {
+    width: 100%;
+    /* display: block-inline; */
+    /* position: absolute; */
+    right: 10px;
+}

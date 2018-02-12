@@ -1,8 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis+Sans');
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+} 
+
+
 
 .hg_header {
     grid-area: header;
     background-color: rgba(255, 0, 0, 0.1);
-    background: linear-gradient(ivory, rgb(223, 222, 222));
+    /* background: linear-gradient(ivory, rgb(223, 222, 222)); */
+    /* background: linear-gradient(rgba(244, 243, 243, 0.598), rgb(223, 222, 222)); */
 	font-size: 1rem;
 	font-weight: 700;
 	font-style: italic;
@@ -16,22 +29,38 @@
 
 .hg_footer {
     grid-area: footer;
-    background: linear-gradient(rgb(152, 151, 151), rgb(108, 107, 107))
+    /* background: linear-gradient(rgb(152, 151, 151), rgb(108, 107, 107)) */
+    /* background: linear-gradient(rgba(171, 195, 232, 0.687), rgba(255, 255, 255, 0.831)); */
+    /* background: linear-gradient(rgba(255, 255, 255, 0.831), rgba(171, 195, 232, 0.687)); */
 }
 
 .hg_main{
     grid-area: main;
-    background: linear-gradient(rgb(223, 222, 222), rgb(152, 151, 151));
+    /* background: linear-gradient(rgb(82, 82, 82), rgba(14, 70, 191, 0.228)); */
+    /* background: linear-gradient(rgba(210, 223, 250, 0.372), rgba(7, 32, 87, 0.66));
+    opacity: 50%; */
+    /* background: linear-gradient(rgba(244, 243, 243, 0.598), rgba(0, 97, 242, 0.687)); */
+    /* background: linear-gradient(rgba(0, 97, 242, 0.687), rgba(171, 195, 232, 0.687)); */
+    background: linear-gradient(rgba(13, 104, 240, 0.899), rgba(255, 255, 255, 0.598));
+    /* background-image: url("../images/vector-striped-grayscale.jpg"); */
 }
 
 .hg_left {
     grid-area: leftSideBar;
-    background: linear-gradient(rgb(223, 222, 222), rgb(152, 151, 151))
+    /* background: linear-gradient(rgb(223, 222, 222), rgb(152, 151, 151)) */
+    /* background: linear-gradient(rgb(82, 82, 82), rgb(152, 151, 151)); */
+    /* background: linear-gradient(rgba(0, 97, 242, 0.687), rgba(244, 243, 243, 0.598)); */
+    /* background: linear-gradient(rgba(0, 97, 242, 0.687), rgba(171, 195, 232, 0.687)); */
+    background: linear-gradient(rgba(13, 104, 240, 0.899), rgba(255, 255, 255, 0.598));
 }
 
 .hg_right {
     grid-area: rightSideBar;
-    background: linear-gradient(rgb(223, 222, 222), rgb(152, 151, 151))
+    /* background: linear-gradient(rgb(223, 222, 222), rgb(152, 151, 151)) */
+    /* background: linear-gradient(rgb(82, 82, 82), rgb(152, 151, 151)); */
+    /* background: linear-gradient(rgba(0, 97, 242, 0.687), rgba(244, 243, 243, 0.598)); */
+    /* background: linear-gradient(rgba(0, 97, 242, 0.687), rgba(171, 195, 232, 0.687)); */
+    background: linear-gradient(rgba(13, 104, 240, 0.899), rgba(255, 255, 255, 0.598));
 }
 
 .hg {
@@ -39,10 +68,10 @@
     grid-template-areas: "header header header"
                          "leftSideBar main rightSideBar"
                          "footer footer footer";
-    grid-template-columns: 150px 1fr 150px;
-    grid-template-rows: 100px
-                        1fr
-                        30px;
+    grid-template-columns: 90px 1fr 700px;
+    grid-template-rows: 45px
+                        .5fr
+                        1px;
     min-height: 100vh;
 }
 
@@ -56,9 +85,9 @@
         grid-template-columns: 100%;
         grid-template-rows: 100px
                             50px
-                            1fr
+                            .50fr
                             50px
-                            30px;
+                            40px;
     }
 }
 

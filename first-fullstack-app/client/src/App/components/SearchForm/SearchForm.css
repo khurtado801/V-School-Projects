@@ -1,65 +1,68 @@
+.search-module-wrapper {
+    position: relative;
+    color: ivory;
+    width: 100%;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 2px 9px 7px #fff;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    margin-left: 3%;
+    background: linear-gradient(rgba(140, 164, 199, 0.687), rgba(72, 120, 191, 0.687));
+}
 
-.form-textbox {
+.search-info-display-wrapper {
     font-size: 2em;
-}
-
-h1 {
-    background-color: #666666;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: rgba(255, 255, 255, 0.5) 1px 3px 3px;
-    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 9px 10px rgba(0, 0, 0, 0.1);
-}
-
-.formWrapper {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    flex-wrap: wrap;
-}
-
-
-.box-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.form-style-3 {
+    color: ivory;
+    width: 100%;
+    padding-left: 1%;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    border-radius: 10px;
-    margin-bottom: 10px;  
-
 }
 
-.form-style-3 label {
-    display: block;
-    margin-bottom: 10px;
-
+.search-info-display-wrapper label {
+    padding-left: 3%;
+    display: block-inline;
+    width: 100%;
+    margin-bottom: 1px;
 }
 
-.form-style-3 label>span {
-    float: left;
+.search-info-display-wrapper label>span {
+    position: absolute;
+    right: 40px;
+    display: block-inline;
     width: 100px;
     font-weight: bold;
     font-size: 13px;
-    text-shadow: 1px 1px 1px #fff;
-    
+    /* text-shadow: 2px 9px 7px #fff; */
+    text-shadow: 2px 3px 5px rgba(255, 253, 253, 0.995);
 }
 
-.form-style-3 fieldset {
+.search-info-display-wrapper fieldset {
+    display: block-inline;
+    font-size: 10em;
+    text-align: left;
+    align-items: center;
+    margin: 0px 0px 5px 0px;
+    padding: 5px;
+    background: linear-gradient(rgba(0, 97, 242, 0.687), rgba(171, 195, 232, 0.687));
+}
+
+.buttons-wrapper {
+    position: relative;
+    width: 25%;
+    flex-wrap: wrap;
     align-items: center;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    margin: 0px 0px 10px 0px;
-    border: 1px solid #FFD2D2;
-    padding: 20px;
-    background: linear-gradient(ivory, rgb(223, 222, 222));
-    
-    
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
+
+
+
+
+
+
+

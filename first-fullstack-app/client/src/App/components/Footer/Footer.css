@@ -1,0 +1,29 @@
+.footer-wrapper {
+    position: relative;
+    width: 100%;
+    color: black;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px rgb(105, 106, 108);
+    padding-top: 7%;
+    display: flex;
+}
+
+.footer-items {
+    position: absolute;
+    display: inline-block;
+    /* position: absolute; */
+    text-align: center;
+    align-items: center;
+    /* padding-left: 2%;
+    padding-right: 2%; */
+
+    left: 46%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-item {
+    position: absolute;
+    padding-left: 00px;
+    padding-right: 50px;
+}
+

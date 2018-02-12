@@ -55,21 +55,20 @@ moduleRoute.route("/:id")
         });
     })
 
-moduleRoute.route("/:title")  
-    .get((req, res) => {
-        let {id} = req.params;
-        moduleModel.find(title, (err, foundModule) => {
-            if(err) {
-                console.error(err);
-            } else {
-                res.send({
-                    msg: `Item ${id} was found`,
-                    data: foundModule
-                })
-            }
-        });
-    })
-    
+// moduleRoute.route("/:title")  
+//     .get((req, res) => {
+//         let {id} = req.params;
+//         moduleModel.find(title, (err, foundModule) => {
+//             if(err) {
+//                 console.error(err);
+//             } else {
+//                 res.send({
+//                     msg: `Item ${id} was found`,
+//                     data: foundModule
+//                 })
+//             }
+//         });
+//     })
     .delete((req, res) => {
         let { id } = req.params;
         // let found = false;
