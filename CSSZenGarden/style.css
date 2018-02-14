@@ -1,0 +1,370 @@
+@import "http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic";
+
+@font-face{
+    font-family: 'Verde Moderna';
+    src: url("./fonts/verdemoderna.woff");
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+body {
+    position: relative;
+}
+
+.html {
+    font-size: 14px;
+
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 200px 70px;
+    grid-template-areas: "hdr" 
+                         "da" 
+                         "int" 
+                         "pt" 
+                         "req" 
+                         "ftr" 
+                         "icftr" 
+                         "ds" 
+                         "menu";
+}
+
+.main-header {
+    grid-area: hdr;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.header-img {
+    position: absolute;
+    width: 100%;
+    height: 260px;
+    background-size: cover;
+    top: 0;
+    z-index: -1;
+    background-image: url("./images/huntington.jpg");
+}
+
+.design-archives {
+    display: flex;
+    grid-area: da;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 355, .1);
+}
+
+.design-archives h3{
+    padding: 15px;
+}
+
+.design-selection {
+    grid-area: ds;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 20px;
+    background-color: #edf5ef;
+    color: black;
+    border-bottom-color:lightgray;
+    border-bottom-style: solid;
+    border-bottom-width: .5px;
+}
+
+.design-item{
+    width: 50%;
+    padding: 12px;
+    border-bottom-color:lightgray;
+    border-bottom-style: solid;
+    border-bottom-width: .5px;
+}
+
+
+p {
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    color: black;
+    font-size: 17px;
+    font-weight: lighter;
+    margin-left: 10%;
+    margin-right: 10%;
+    line-height: 25px;
+}
+
+h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    color: white;
+    font-size: 35px;
+    
+}
+
+h1::before {
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    content: "";
+    width: 80px;
+    height: 80px;
+    margin: -20px 20px 0 0;
+    background-image: url("./images/enso.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.6;
+}
+
+h2 {
+    font-family: 'Libre Baskerville', serif;
+    color: white;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: lighter;
+    padding: 8px;
+    }
+
+h2::before {
+    content: "";
+    padding: 50px;
+}
+
+h3 {
+    font-family: 'Julius Sans One', sans-serif;
+    color: #2e484c;
+    font-weight: lighter;
+    font-size: 25px;
+    float: left;
+    clear: left;
+    width: 66%;
+    padding: 1em 5% 1em 10%;
+}
+
+h4 {
+    font-family: 'Julius Sans One', sans-serif;
+    color: black;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+h5 {
+    font-family: 'Julius Sans One', sans-serif;
+    color: white;
+    font-size: 20px;
+    }
+
+h6 {
+    font-family: 'Julius Sans One', sans-serif;
+    color: black;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.intro {
+    grid-area: int;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em; 
+}
+
+.participation {
+    grid-area: pt;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+    /* margin-top: 3em; */
+    background-color: rgba(138,188,159,0.5);
+    background-image: url("./images/bamboo.png"); 
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.requirements {
+    grid-area: req;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+    margin-top: .5em;  
+}
+
+footer {
+    grid-area: ftr;
+    width: 100%;
+    padding: 1.5em 10%;
+    line-height: 50px;
+    color: white;
+    font-size: 25px;
+    background: #3e5d67;
+    background-image: url("./images/contours.png"), url("./images/gridlines.png"), url("./images/noise.png"), url("./images/koi.jpg");
+    text-align: center;
+}
+
+.icon-footer {
+    grid-area: icftr;
+    width: 100%;
+    padding: 3em 10%;
+    color: white;
+    background-color: #134347;
+    text-align: center;
+}
+
+.icon{
+    font-family: 'Verde Moderna';
+    font-size: 3.0em;
+    margin: 0 10px 0 10px;
+}
+
+.icon:hover{
+    cursor: pointer;
+}
+
+.a::before{
+    content: "a";
+    color: rgba(255, 255, 355, .7);
+}
+
+.a:hover::before{
+    content: "A";
+    color: rgba(255, 255, 355, .4);
+    transition: color .2s linear;
+}
+
+.five::before{
+    content: "5";
+    color: rgba(255, 255, 355, .7);
+}
+
+.five:hover::before{
+    content: "%";
+    color: rgba(255, 255, 355, .4);
+    transition: color .2s linear;
+}
+
+.c::before{
+    content: "c";
+    color: rgba(255, 255, 355, .7);
+}
+
+.c:hover::before{
+    content: "C";
+    color: rgba(255, 255, 355, .4);
+    transition: color .2s linear;
+}
+
+.three::before{
+    content: "3";
+    color: rgba(255, 255, 355, .7);
+}
+
+.three:hover::before{
+    content: "#";
+    color: rgba(255, 255, 355, .4);
+    transition: color .2s linear;
+}
+
+.g::before{
+    content: "g";
+    color: rgba(255, 255, 355, .7);
+}
+
+.g:hover::before{
+    content: "G";
+    color: rgba(255, 255, 355, .4);
+    transition: color .2s linear;
+}
+.icon.D {
+    font-size: medium;
+    margin: 0;
+    justify-content: center;
+}
+
+.D::before {
+    content: "D";
+    color: rgba(255, 255, 355, .4);
+    transition: color .2s linear;
+}
+ 
+
+
+.menu {
+    grid-area: menu;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Julius Sans One', sans-serif;
+    color: black;
+    font-size: 18px;
+    background-color: rgba(138,188,159,0.5);
+    background-image: url("./images/bamboo.png");
+    border-bottom-color:darkgray;
+    border-bottom-style: solid;
+    border-bottom-width: .5px;
+    background-attachment: fixed;
+}
+
+.menu-item{
+    width: 50%;
+    padding: 12px;
+    border-bottom-color:darkgray;
+    border-bottom-style: solid;
+    border-bottom-width: .5px;
+}
+
+@media screen and (min-width: 1130px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 310px ;
+        grid-template-areas: "hdr da" 
+                             "int ds" 
+                             "pt menu" 
+                             "req ." 
+                             "ftr ftr"
+                             "icftr icftr";
+    }
+
+    .header-img {
+        height: 310px;
+
+    }
+    .design-archives {
+        background-color: rgba(255, 255, 355, .02);
+    }
+
+    .design-archives h3{
+        background-color: rgba(255, 255, 355, .2);
+    }
+
+    .design-selection{
+        flex-direction: column;
+    }
+
+    .side-bar-item{
+        width: 100%;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu-item {
+        flex-direction: column;
+
+    }
+}
