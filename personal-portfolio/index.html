@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,13 @@
     <link rel="stylesheet" href="/node_modules/bxslider/dist/jquery.bxslider.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="/node_modules/bxslider/dist/jquery.bxslider.min.js"></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">s
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <script>
     </script>
 </head>
+
 <body>
     <div class="header-wrapper">
         <header id="header">
@@ -23,7 +25,7 @@
                     <!-- <a href=""> Hello, I'm Ken Hurtado </a> -->
                 </div>
         </header>
-        <div class="nav-wrapper">
+        <div class="hg-header">
             <nav id="nav">
                 <ul>
                     <div class="nav-item">
@@ -34,6 +36,7 @@
                     <div class="nav-item">
                         <li>
                             <a href="#slide2" title="Next Section">About Me</a>
+                            <!-- <a href="#slide2" title="Next Section"><img src="./img/Me.png">About Me</a> -->
                         </li>
                     </div>
                     <div class="nav-item">
@@ -46,46 +49,135 @@
                             <a href="#slide4" title="Next Section">Contact</a>
                         </li>
                     </div>
+                    <div class="header-icon-wrapper">
+                        <div  class="header-icons">
+                                <a href="https://www.github.com/khurtado801">
+                                    <img src="./img/GitHub-Round-Blue-small.png">
+                                </a>
+                                <a href="https://www.linkedin.com/in/khurtado801/">
+                                    <img src="./img/linkedin-logo-hd-png-3-small.png">
+                                </a>
+                        </div>
+                    </div>
                 </ul>
             </nav>
         </div>
         </div>
     </div>
+    <div class="hg-main">
         <div id="slide1">
-        <div class="content">
-            <h2>Hello, </h2>
-            <h1>I'm Ken Hurtado</h1>
-        </div>
+            <div class="greeting">
+                <h2>Hello, </h2>
+                <h1>I'm Ken Hurtado</h1>
+            </div>
         </div>
         <div id="slide2">
             <div class="content">
-                <div class="text-container">
-                    <h4 class="text">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora
-                        quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum.</h4>
-                    <img src="" align="left">
-                    <h4 class="gray">Zombie text</h4>
+                <div class="text-container1">
+                    <div class="about-develope">
+                        <div class="about-container">
+                            <h2>I Develope</h2>
+                            <h4 class="text-about-me">Whether it's developing a solution for a minor annoyance, or working with a team to develope the next big deal-anyway I can get involved the better. No task is too small and no job is too big.</h4>
+                            <img src="" align="left">
+                        </div>
+                    </div>
+                    <div class="about-design">
+                        <div class="about-container">
+                            <h2>I Design</h2>
+                            <h4 class="text-about-me">Sometimes it's just nice to start from sratch and engineer a soluton for a problem you didn't know you had. Regardless of the 'why', creating solutions that you will love is my dream.</h4>
+                            <img src="" align="left">
+                        </div>
+                    </div>
+                    <div class="about-love">
+                        <div class="about-container">
+                            <h2>I Love It</h2>
+                            <h4 class="text-about-me">Figuring out how things worked always grabbed my attention. It wasn't about "fixing", Ken was just fascinated with their inner workings. This fascination
+                                about how things work would also prove to be a bridge to the world of software developement.</h4>
+                            <img src="" align="left">
+                        </div>
+                    </div>
                 </div>
+               
             </div>
         </div>
         <div id="slide3">
             <div class="content">
-                <div class="text-container">
+                    <h2>These are some of my projects. You can click on any image to get a larger view.</h2>
+                <div class="gallery">
+                    
+                    <!-- <div class="preview" align="center">
+                        <img id="preview" src="./img/CSSZen.png" alt="" />
+                    </div>
+                    <div class="thumbnails-container" align="center">
+                        <div class="thumbnails">
+                            <img onmouseover="getElementById('preview').src=this.src" src="./img/CSSZen.png" />
+                            <img onmouseover="getElementById('preview').src=this.src" src="./img/mario.png" />
+                            <img onmouseover="getElementById('preview').src=this.src" src="./img/BeastieBoys.png" />
+                        </div>
+                    </div> -->
+                    <div class="gallery-item">
+                            <img id="myImg1" src="./img/BusinessTime.png" alt="This was one of my first website. Not much to it, I just like the way it looks."
+                                width="300" height="200">
+                        </div>
+                    <div class="gallery-item">
+                        <img id="myImg2" src="./img/CSSZen.png" alt="The purpose of this project was to duplicate the style of http://www.csszengarden.com/." width="300"
+                            height="200">
+                    </div>
+                    <div class="gallery-item">
+                        <img id="myImg3" src="./img/FirstFullStack.png" alt="A single page fully CRUD app that allows a user to enter the make, model, function, and size of a euro-rack modular synth module. This app also has the ability to let users search by module name."
+                            width="300" height="200">
+                    </div>
+                    <div class="gallery-item">
+                        <img id="myImg4" src="./img/BeastieBoys.png" alt="This project utilizes a RESTFUL API so that user can run queries about their favorite musician which return all albumns by that artist."
+                            width="300" height="200">
+                    </div>
+                    <div class="gallery-item">
+                        <img id="myImg5" src="./img/RockTheVote.png" alt="Another fully CRUD app where the user can create an issue and then up vote, down vote, add/delete a comment-or delete the issue. It also keeps a running total with running total of all the votes."
+                            width="300" height="200">
+                    </div>
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption"></div>
+                    </div>
+
+
+
+                    <!-- <div class="text-container">
+                        <h4 class="text">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata
+                            corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead
+                            survivor dictum.</h4>
+                        <img src="" align="left">
+                        <h4 class="white">Zombie text</h4>
+                    </div> -->
+                </div>
+                <!-- <div class="text-container">
                     <h4 class="text">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora
                         quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum.</h4>
-                    <img src="" align="left">
                     <h4 class="white">Zombie text</h4>
+                </div> -->
+            </div>
+            <div id="slide4">
+                <div class="content">
+                    <div class="text-container">
+
+                        <h4 class="text">Contact zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering
+                            animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero
+                            undead survivor dictum.
+                        </h4>
+                        <h4 class="white">Zombie text</h4>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="slide4">
-            <div class="content">
-                <div class="text-container">
-                    <h4 class="text">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora
-                        quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum.</h4>
-                    <img src="" align="left">
-                    <h4 class="gray">Zombie text</h4>
-                </div>
+
+
+        <div class="hg-right">
+            <div class="hg-right-main">
             </div>
         </div>
 </body>
+
 </html>
