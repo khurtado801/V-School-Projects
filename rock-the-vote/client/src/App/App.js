@@ -1,16 +1,12 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React from 'react';
+import Issues from './Issues/Issues.js';
 
-import Votes from "./components/Votes/Votes.js";
-
-class App extends Component {
-    
-    render() {
-        return (
-            <div className="App">
-                <Votes />
-            </div>
-        )
-    }
+function App() {
+    return (
+        <div>
+            <Issues />
+        </div>
+    )
 }
+
 export default App;
