@@ -1,14 +1,3 @@
-/*
-This code contains only syntax and code style problems. The logic of the code works,
-so DO NOT change the functionality of anything in here.
-
-In short, you shouldn't need to add your own statements anywhere,
-just fix the existing ones.
-*/
-
-
-// Written by Kent, Clark
-
 var enemies = ["Lex", "Batman", "Darkseid", "Brainiac", "General Zod", "Doomsday"];
 
 function whoWins(isThereKryptonite, enemyName) {
