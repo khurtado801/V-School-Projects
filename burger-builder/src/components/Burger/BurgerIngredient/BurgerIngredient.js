@@ -1,0 +1,53 @@
+import React, { Component } from 'react'
+import PropTypes from 'prop-types';
+
+import classes from './BurgerIngredient.css';
+
+class BurgerIngredient extends Component {
+    render() {
+        // we will get which ingredient to render via props
+        // set to NULL because initially we won't render anything
+        let ingredient = null;
+
+        // analyize the 'type' of ingredient
+        // 'type' is property we expect to receive
+        switch (this.props.type) {
+            case ('bread-bottom'):
+                ingredient = <div className={classes.BreadBottom} ></div>;
+                break;
+            case ('bread-top'):
+                ingredient = (
+                    <div className={classes.BreadTop}>
+                        <div className={classes.Seeds1} ></div>
+                        <div className={classes.Seeds2} ></div>
+                    </div>
+                );
+                break;
+            case ('meat'):
+                ingredient = <div className={classes.Meat}></div>
+                break;
+            case ('cheese'):
+                ingredient = <div className={classes.Cheese}></div>
+                break;
+            case ('salad'):
+                ingredient = <div className={classes.Salad}></div>
+                break;
+            case ('bacon'):
+                ingredient = <div className={classes.Bacon}></div>
+                break;
+            default:
+                ingredient = null;
+        }
+        return ingredient;
+    }
+}
+
+export default BurgerIngredient
+
+// prop type validation
+BurgerIngredient.propTypes = {
+    // configure the 'type' property
+    // type should be a string, if we try to use ingredient component without
+    // passing a type we will get an error because of isRequired
+    type: PropTypes.string.isRequired
+};
