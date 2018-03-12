@@ -1,0 +1,188 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>My Portfolio</title>
+	<link href="css/style.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" rel="stylesheet" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+<section class="navigation">
+<div class="nav-container">
+<div class="brand"><a href="#slide1" title="Next Section">Ken&#39;s Portfolio</a></div>
+
+<nav>
+<div class="nav-mobile"></div>
+
+<ul class="nav-list">
+	<li><a href="#slide1" title="Next Section">About</a></li>
+	<li><a href="#slide2" title="Next Section">Services</a> <!-- <a href="#slide2" title="Next Section"><img src="./img/Me.png">About Me</a> --></li>
+	<li><a href="#slide3" title="Next Section">Portfolio</a></li>
+	<li><a href="#slide4" title="Next Section">Contact</a></li>
+</ul>
+</nav>
+</div>
+</section>
+
+<div class="hg-main">
+<div id="slide1">
+<div class="greeting">
+<h2 id="header2">Hello,</h2>
+
+<h1 id="header1">I&#39;m Ken Hurtado</h1>
+</div>
+</div>
+
+<div id="slide2">
+<div class="content">
+<div class="text-container1">
+<div class="about-develope">
+<div class="about-container">
+<h2>I Develop</h2>
+
+<h4 class="text-about-me">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum..</h4>
+<img align="left" src="" /></div>
+</div>
+
+<div class="about-design">
+<div class="about-container">
+<h2>I Design</h2>
+
+<h4 class="text-about-me">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse.</h4>
+<img align="left" src="" /></div>
+</div>
+
+<div class="about-love">
+<div class="about-container">
+<h2>I Love It</h2>
+
+<h4 class="text-about-me">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​.</h4>
+<img align="left" src="" /></div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="slide3">
+<div class="content">
+<div id="projects">
+<h2>These are some of my projects. You can click on any image to get a larger view.</h2>
+</div>
+
+<div class="gallery"><!--  --><a href="#openModal1">Box 1</a>
+
+<div class="modalDialog" id="openModal1">
+<div><a class="close" href="#close" title="Close">X</a>
+
+<h2>Modal Box 1</h2>
+
+<p>This is a sample modal box that can be created using the powers of CSS3.</p>
+
+<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+</div>
+</div>
+<a href="#openModal2">Box 2</a>
+
+<div class="modalDialog" id="openModal2">
+<div><a class="close" href="#close" title="Close">X</a>
+
+<h2>Modal Box 2</h2>
+
+<p><strong>Box 2</strong></p>
+
+<p>yadda yadda</p>
+</div>
+<!-- 
+<div class="gallery-item">
+                        <a href="#openModal1">
+                            <img id="myImg1" src="./img/BusinessTime.png" alt="This was one of my first website. Not much to it, I just like the way it looks."
+                                width="300" height="200">
+                        </a>
+                    </div>
+
+                    <div id="openModal1" class="modalDialog">
+                        <div>
+                            <a href="#close" title="Close" class="close">X</a>
+                            <h2>This was one of my first website. Not much to it, I just like the way it looks.</h2>
+                        <a href="#openModal1">
+                            <img id="modal-content" src="./img/BusinessTime.png" alt="This was one of my first website. Not much to it, I just like the way it looks."
+                                width="300" height="200">
+                        </a>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <a href="#openModal1">
+                            <img id="myImg2" src="./img/CSSZen.png" alt="This was one of my first website. Not much to it, I just like the way it looks."
+                                width="300" height="200">
+                        </a>
+                    </div>
+
+                    <div id="openModal1" class="modalDialog">
+                        <div>
+                            <a href="#close" title="Close" class="close">X</a>
+                            <h2>This was one of my first website. Not much to it, I just like the way it looks.</h2>
+                        <a href="#openModal1">
+                            <img id="modal-content" src="./img/CSSZen.png" alt="This was one of my first website. Not much to it, I just like the way it looks."
+                                width="300" height="200">
+                        </a>
+                        </div>
+                    </div> --><!--  --><!-- <div class="gallery-item">
+                        <img id="myImg1" src="./img/BusinessTime.png" alt="This was one of my first website. Not much to it, I just like the way it looks."
+                            width="300" height="200">
+                    </div>
+                    <div class="gallery-item">
+                        <img id="myImg2" src="./img/CSSZen.png" alt="The purpose of this project was to duplicate the style of http://www.csszengarden.com/."
+                            width="300" height="200">
+                    </div>
+                    <div class="gallery-item">
+                        <img id="myImg3" src="./img/FirstFullStack.png" alt="A single page fully CRUD app that allows a user to enter the make, model, function, and size of a euro-rack modular synth module. This app also has the ability to let users search by module name."
+                            width="300" height="200">
+                    </div>
+                    <div class="gallery-item">
+                        <img id="myImg4" src="./img/BeastieBoys.png" alt="This project utilizes a RESTFUL API so that user can run queries about their favorite musician which return all albumns by that artist."
+                            width="300" height="200">
+                    </div>
+                    <div class="gallery-item">
+                        <img id="myImg5" src="./img/RockTheVote.png" alt="Another fully CRUD app where the user can create an issue and then up vote, down vote, add/delete a comment-or delete the issue. It also keeps a running total with running total of all the votes."
+                            width="300" height="200">
+                    </div>
+                    <div class="gallery-item">
+                        <img id="myImg6" src="./img/CSSZen.png" alt="Another fully CRUD app where the user can create an issue and then up vote, down vote, add/delete a comment-or delete the issue. It also keeps a running total with running total of all the votes."
+                            width="300" height="200">
+                    </div> --><!-- The Modal
+                    <div id="myModal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption"></div>
+                    </div> --><!-- <div class="text-container">
+                                    <h4 class="text">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata
+                                        corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead
+                                        survivor dictum.</h4>
+                                    <img src="" align="left">
+                                    <h4 class="white">Zombie text</h4>
+                                </div> --></div>
+<!-- <div class="text-container">
+                                <h4 class="text">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora
+                                    quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum.</h4>
+                                <h4 class="white">Zombie text</h4>
+                            </div> --></div>
+</div>
+
+<div id="slide4">
+<div class="content">
+<div class="text-container">
+<h4 class="text">Contact zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum.</h4>
+
+<h4 class="white">Zombie text</h4>
+</div>
+</div>
+</div>
+</div>
+
+<div class="hg-right">
+<div class="hg-right-main"></div>
+</div>
+<script type="text/javascript" src="./js/index.js"></script></div>
+</body>
+</html>

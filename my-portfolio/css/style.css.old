@@ -27,6 +27,7 @@ p {
   margin: 0;
   padding: 0;
 }
+
 #header2 {
   font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
@@ -58,10 +59,12 @@ p {
   color: #ffffff;
   text-decoration: none;
 }
+
 .nav-container {
   max-width: 1000px;
   margin: 0 auto;
 }
+
 nav {
   float: right;
   font-weight: bold; 
@@ -103,12 +106,14 @@ nav ul li ul li a {
   padding: 15px;
   line-height: 20px;
 }
+
 .nav-dropdown {
   position: absolute;
   display: none;
   z-index: 1;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
+
 /* Mobile navigation */
 .nav-mobile {
   display: none;
@@ -116,13 +121,16 @@ nav ul li ul li a {
   top: 0;
   right: 0;
   /* background: #262626; */
+  
   height: 70px;
   width: 70px;
 }
+
 @media only screen and (max-width: 798px) {
   .nav-mobile {
     display: block;
   }
+
   nav {
     width: 100%;
     padding: 70px 0 15px;
@@ -143,8 +151,10 @@ nav ul li ul li a {
     padding-left: 30px;
 
   }
-.nav-dropdown {
+
+  .nav-dropdown {
     position: static;
+
   }
 }
 @media screen and (min-width: 799px) {
@@ -190,26 +200,13 @@ nav ul li ul li a {
 #nav-toggle.active span:after {
   transform: rotate(-45deg);
 }
-.flex-center {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-.about-content {
-  padding: 5%;
-}
-@media screen and (max-width: 798px){
-  .flex-center {
-      display: block;
-    }
-    body {
-      background:url('../img/slide3.jpg') fixed;
-    }
-}
+
+
+
 #slide1 {
   background:url('../img/slide3.jpg') 50% 0 no-repeat fixed;
   color: #fff;
-  height: 500px;
+  height: 300px;
   margin: 0;
   padding: 200px 0 260px 0;
   background-size: cover;
@@ -218,7 +215,7 @@ nav ul li ul li a {
 #slide2 {
   background: url('../img/slide3.jpg') 50% 0 no-repeat fixed;
   color: #fff;
-  height: 700px;
+  height: 600px;
   margin: 0;
   padding: 200px 0 260px 0;
   background-size: cover;
@@ -227,9 +224,9 @@ nav ul li ul li a {
 #slide3 {
   background: url('../img/slide3.jpg') 50% 0 no-repeat fixed;
   color: #fff;
-  height: 1565px;
+  height: 600px;
   margin: 0;
-  padding: 200px 0 300px 0;
+  padding: 200px 0 260px 0;
   background-size: cover;
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
@@ -255,6 +252,7 @@ nav ul li ul li a {
 .gallery {
   padding-right: 50px;
     padding-left: 50px;
+
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -273,6 +271,14 @@ nav ul li ul li a {
   text-align: center;
 }
 
+/* #myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;} */
+
 /* The Modal (background) */
 .modalssssss {
   display: none; /* Hidden by default */
@@ -288,14 +294,45 @@ nav ul li ul li a {
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
+/* Modal Content (image) */
+/* .modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+} */
+
+/* Caption of Modal Image */
+/* #caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+} */
+
 /* Add Animation */
-#modal-content{
+.img-wrapper {
+  width: 100%;
+  height: 75%;
+  
+}
+
+.modal-content{
   margin: auto;
   display: block;
   width: 100%;
-  height: 50%;
+  height: 70%;
   max-width: 700px;
-  overflow: auto;
+  /* overflow: auto; */
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+  pointer-events: none;
 }
 #modal-content, #caption {    
   -webkit-animation-name: zoom;
@@ -306,10 +343,10 @@ nav ul li ul li a {
 /*  */
 
 .modalDialog {
+  padding-top: 50px;
   position: fixed;
   width: 100%;
   height:100%;
-  font-family: Arial, Helvetica, sans-serif;
   top: 20px;
   right: 0;
   bottom: 0;
@@ -342,11 +379,12 @@ nav ul li ul li a {
   background: -moz-linear-gradient(#fff, #999);
   background: -webkit-linear-gradient(#fff, #999);
   background: -o-linear-gradient(#fff, #999);
+  
 }
 
 .close {
   z-index: 99999;
-  opacity:0;
+  /* opacity:-5; */
   background: #00d9ff;
   color: #FFFFFF;
   line-height: 25px;

@@ -1,3 +1,4 @@
+
 (function($) { // Begin jQuery
   $(function() { // DOM ready
     // If a link has a dropdown, add sub menu toggle.
@@ -22,138 +23,84 @@
   }); // end DOM ready
 })(jQuery); // end jQuery
 
-window.onload = function() {
-    // Get the modal
-var modal = document.getElementById('myModal');
-console.log("test")
+$(document).ready(function() {
+    $('a[href*=#]').each(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+      && location.hostname == this.hostname
+      && this.hash.replace(/#/,'') ) {
+        var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+        var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+         if ($target) {
+           var targetOffset = $target.offset().top;
+  
+  
+           $(this).click(function() {
+              $("#nav li a").removeClass("active");
+              $(this).addClass('active');
+             $('html, body').animate({scrollTop: targetOffset}, 1000);
+             return false;
+           });
+        }
+      }
+    });
+  
+  });
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg1');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function ()  {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-}
+  $(document).ready(function() {
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close-btn")[0];
+    $('body').smoothScroll({
+      delegateSelector: 'ul.nav-list a'
+    });
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-    modal.style.display = "none";
-}
+    $('h2.subnav a').click(function(event) {
+      event.preventDefault();
+      var link = this;
+      $.smoothScroll({
+        scrollTarget: link.hash
+      });
+    });
 
-    // Get the modal
-    var modal = document.getElementById('myModal');
-    console.log("test")
-    
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var img = document.getElementById('myImg2');
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    img.onclick = function ()  {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
-    }
-    
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close-btn")[0];
-    
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() { 
-        modal.style.display = "none";
-    }
+    $('#change-speed').bind('click', function() {
+      var $p1 = $('ul.mainnav a').first();
+      var p1Opts = $p1.smoothScroll('options') || {};
 
-        // Get the modal
-var modal = document.getElementById('myModal');
-console.log("test")
+      p1Opts.speed = p1Opts.speed === 1400 ? 400 : 1400;
+      $p1.smoothScroll('options', p1Opts);
+    });
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg3');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function ()  {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-}
+    $('button.scrollsomething').bind('click', function(event) {
+      event.preventDefault();
+      $.smoothScroll({
+        scrollElement: $('div.scrollme'),
+        scrollTarget: '#findme'
+      });
+    });
+    $('button.scrollhorz').bind('click', function(event) {
+      event.preventDefault();
+      $.smoothScroll({
+        direction: 'left',
+        scrollElement: $('div.scrollme'),
+        scrollTarget: '.horiz'
+      });
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close-btn")[0];
+    });
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-    modal.style.display = "none";
-}
+    $('#scroll-relative-plus').on('click', function() {
+      var wHeight = $(window).height();
+      $.smoothScroll('+=100px');
+    });
+    $('#scroll-relative-minus').on('click', function() {
+      $.smoothScroll('-=100px');
+    });
+    $('.page-scroll').on('click', function() {
+      var wHeight = $(window).height();
+      var wWidth = $(window).width();
+      var rel = $(this).hasClass('down') ? '+=' : '-=';
 
+      if (wWidth <= 560) {
+        wHeight -= 130;
+      }
 
-        // Get the modal
-        var modal = document.getElementById('myModal');
-        console.log("test")
-        
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var img = document.getElementById('myImg4');
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-        img.onclick = function ()  {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-        
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close-btn")[0];
-        
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() { 
-            modal.style.display = "none";
-        }
-
-                // Get the modal
-                var modal = document.getElementById('myModal');
-                console.log("test")
-                
-                // Get the image and insert it inside the modal - use its "alt" text as a caption
-                var img = document.getElementById('myImg5');
-                var modalImg = document.getElementById("img01");
-                var captionText = document.getElementById("caption");
-                img.onclick = function ()  {
-                    modal.style.display = "block";
-                    modalImg.src = this.src;
-                    captionText.innerHTML = this.alt;
-                }
-                
-                // Get the <span> element that closes the modal
-                var span = document.getElementsByClassName("close-btn")[0];
-                
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function() { 
-                    modal.style.display = "none";
-                }
-
-
-                                // Get the modal
-                                var modal = document.getElementById('myModal');
-                console.log("test")
-                
-                // Get the image and insert it inside the modal - use its "alt" text as a caption
-                var img = document.getElementById('myImg6');
-                var modalImg = document.getElementById("img01");
-                var captionText = document.getElementById("caption");
-                img.onclick = function ()  {
-                    modal.style.display = "block";
-                    modalImg.src = this.src;
-                    captionText.innerHTML = this.alt;
-                }
-                
-                // Get the <span> element that closes the modal
-                var span = document.getElementsByClassName("close-btn")[0];
-                
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function() { 
-                    modal.style.display = "none";
-                }
-}
+      $.smoothScroll(rel + wHeight);
+    });
+  });
