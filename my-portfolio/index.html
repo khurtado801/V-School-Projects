@@ -10,9 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
         crossorigin="anonymous">
-    <script src="./js/jquery.smooth-scroll.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-        crossorigin="anonymous"></script>
+    <script src="./js/smooth-scroll.polyfills.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 
@@ -31,19 +30,23 @@
                 </div>
                 <ul class="nav-list">
                     <li>
-                        <a href="#slide1" title="Next Section">About</a>
+                        <a data-scroll href="#slide1" title="Next Section">
+                            <span class="glyphicon glyphicon-info-sign"></span>About</a>
                         <!-- <a title="$.scrollTo('#slide1', 800, {easing:'elasout'});" href="#slide1">About</a> -->
                     </li>
                     <li>
-                        <a href="#slide2" title="Next Section">Services</a>
+                        <a data-scroll href="#slide2" title="Next Section">
+                            <i class="glyphicon glyphicon-asterisk"></i>Services</a>
                         <!-- <a title="$.scrollTo('#slide2', 800, {easing:'elasout'});" href="#slide2">Services</a> -->
                         <!-- <a href="#slide2" title="Next Section"><img src="./img/Me.png">About Me</a> -->
                     </li>
                     <li>
-                        <a href="#slide3" title="Next Section">Portfolio</a>
+                        <a data-scroll href="#slide3" title="Next Section">
+                            <i class="glyphicon glyphicon-user"></i>Portfolio</a>
                     </li>
                     <li>
-                        <a href="#slide4" title="Next Section">Contact</a>
+                        <a data-scroll href="#slide4" title="Next Section">
+                            <i class="glyphicon glyphicon-envelope"></i>Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -55,121 +58,192 @@
             <div class="greeting">
                 <h2 id="header2">Hello, </h2>
                 <h1 id="header1">I'm Ken Hurtado</h1>
+                <h3 id="header2">
+                    <img src="./img/My_Profile_Pix.png" alt="" width="200px">
+                </h3>
+                <h2 id="header2">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora
+                    quaeritis. Summus brains sit​​.</h2>
+                <hr class="light">
+                <p id="header2">
+                    <a data-scroll href="#slide2" title="Next Section">Let's get started!</a>
+                </p>
             </div>
+
         </div>
         <div id="slide2">
             <div class="flex-center">
                 <div class="about-content">
                     <h2>I Develop</h2>
-                    <h4 class="text-about-me">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora
-                        quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum..</h4>
+                    <div class="glyphicon-wrapper">
+                        <i class="glyphicon glyphicon-tower"></i>
+                    </div>
+                    <hr>
+                    <h3 class="text-about-me">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora
+                        quaeritis. Summus brains sit​​.</h3>
                     <img src="" align="left">
                 </div>
 
-
                 <div class="about-content">
                     <h2>I Design</h2>
-                    <h4 class="text-about-me">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora
-                        quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum..</h4>
-                    <img src="" align="left">
+                    <div class="glyphicon-wrapper">
+                        <i class="glyphicon glyphicon-cog"></i>
+                    </div>
+                    <hr>
+                    <h3 class="text-about-me">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora
+                        quaeritis. Summus brains sit​​.</h3>
+
                 </div>
 
                 <div class="about-content">
                     <h2>I Love It</h2>
-                    <h4 class="text-about-me">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora
-                        quaeritis. Summus brains sit​​.</h4>
+                    <div class="glyphicon-wrapper">
+                        <i class="glyphicon glyphicon-heart"></i>
+                    </div>
+                    <hr>
+                    <h3 class="text-about-me">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora
+                        quaeritis. Summus brains sit​​.</h3>
                     <img src="" align="left">
                 </div>
             </div>
         </div>
         <div id="slide3">
-            <div class="content">
+            <div class="flex-center">
                 <div id="projects">
-                    <h2>These are some of my projects. You can click on any image to get a larger view.</h2>
+                    <h2>These are some of my projects.</h2>
+                    <hr>
+                    <h3>Click on any image to get a larger view.</h3>
                 </div>
                 <div class="gallery">
                     <a href="#openModal1">
-                        <img src="./img/RockTheVote.png" alt="" width="300" height="200">
+                        <img src="./img/RockTheVote.png" alt="" width="275px" height="175px">
                     </a>
                     <div id="openModal1" class="modalDialog">
-                        <div>
-                            <a href="#close" title="Close" class="close">X</a>
-                            <img src="./img/RockTheVote.png" alt="" width="100%">
+                        <div class="modal-item">
+                            <a href="#!close" title="Close" class="close">X</a>
+                            <img src="./img/RockTheVote.png" alt="" width="95%" height="90%">
+                            <h3>Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                                <a href="http://github.com/khurtado801">Link goes here:</a>
+                            </h3>
                         </div>
                     </div>
 
                     <a href="#openModal2">
-                        <img src="./img/BusinessTime.png" alt="" width="300" height="200">
+                        <img src="./img/BusinessTime.png" alt="" width="275px" height="175px">
                     </a>
                     <div id="openModal2" class="modalDialog">
                         <div>
-                            <a href="#close" title="Close" class="close">X</a>
-                            <img src="./img/BusinessTime.png" alt="" height="80%" width="100%">
+                            <a href="#!close" title="Close" class="close">X</a>
+                            <img src="./img/BusinessTime.png" alt="" width="95%" height="90%">
+                            <h3>Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                                <a href="http://github.com/khurtado801">Link goes here:</a>
+                            </h3>
                         </div>
                     </div>
 
                     <a href="#openModal3">
-                        <img src="./img/CSSZen.png" alt="" width="300" height="200">
+                        <img src="./img/CSSZen.png" alt="" width="275px" height="175px">
                     </a>
 
                     <div id="openModal3" class="modalDialog">
                         <div>
-                            <a href="#close" title="Close" class="close">X</a>
-                            <img src="./img/CSSZen.png" alt="" width="100%">
+                            <a href="#!close" title="Close" class="close">X</a>
+                            <img src="./img/CSSZen.png" alt="" width="95%" height="90%">
+                            <h3>Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                                <a href="http://github.com/khurtado801">Link goes here:</a>
+                            </h3>
                         </div>
                     </div>
 
                     <a href="#openModal4">
-                        <img src="./img/FirstFullStack.png" alt="" width="300" height="200">
+                        <img src="./img/FirstFullStack.png" alt="" width="275px" height="175px">
                     </a>
                     <div id="openModal4" class="modalDialog">
                         <div>
-                            <a href="#close" title="Close" class="close">X</a>
-                            <img src="./img/FirstFullStack.png" alt="" width="100%">
+                            <a href="#!close" title="Close" class="close">X</a>
+                            <img src="./img/FirstFullStack.png" alt="" width="95%" height="90%">
+                            <h3>Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                                <a href="http://github.com/khurtado801">Link goes here:</a>
+                            </h3>
                         </div>
                     </div>
 
                     <a href="#openModal5">
-                        <img src="./img/mario.png" alt="" width="300" height="200">
+                        <img src="./img/mario.png" alt="" width="275px" height="175px">
                     </a>
 
                     <div id="openModal5" class="modalDialog">
                         <div>
-                            <a href="#close" title="Close" class="close">X</a>
-                            <img src="./img/mario.png" alt="" width="100%">
+                            <a href="#!close" title="Close" class="close">X</a>
+                            <img src="./img/mario.png" alt="" width="95%" height="90%">
+                            <h3>Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                                <a href="http://github.com/khurtado801">Link goes here:</a>
+                            </h3>
                         </div>
                     </div>
 
                     <a href="#openModal6">
-                        <img src="./img/BeastieBoys.png" alt="" width="300" height="200">
+                        <img src="./img/BeastieBoys.png" alt="" width="275px" height="175px">
                     </a>
                     <div id="openModal6" class="modalDialog">
                         <div>
-                            <a href="#close" title="Close" class="close">X</a>
-                            <img src="./img/BeastieBoys.png" alt="" width="100%">
+                            <a href="#!close" title="Close" class="close">X</a>
+                            <img src="./img/BeastieBoys.png" alt="" width="95%" height="90%">
+                            <h3>Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                                <a href="http://github.com/khurtado801">Link goes here:</a>
+                            </h3>
                         </div>
                     </div>
                 </div>
-                <div id="slide4">
-                    <div class="content">
-                        <div class="text-container">
-
-                            <h4 class="text">Contact zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering
-                                animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger
-                                omero undead survivor dictum.
-                            </h4>
-                            <h4 class="white">Zombie text</h4>
-                        </div>
+            </div>
+        </div>
+        <div class="over-lay">
+            <div id="slide4">
+                <div class="flex-center">
+                    <div class="text-container">
+                        <section id="contact">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                                        <h1 class="section-heading">Let's Get In Touch!</h1>
+                                        <hr class="light">
+                                        <h2>Questions or comments? That's great! Send me an email and I will get back to you
+                                            as soon as possible!</h2>
+                                    </div>
+                                    <h2>
+                                        <a href="mailto:khurtado@protonmail.com">khurtado@protonmail.com
+                                            <i class="glyphicon glyphicon-envelope"></i>
+                                        </a>
+                                    </h2>
+                                    <h3>
+                                        <a href="https://www.linkedin.com/in/khurtado801/">
+                                            <i class="glyphicon glyphicon-pencil"></i>LinkedIn</a>
+                                        <a href="https://github.com/khurtado801/Web-Dev-Projects">
+                                            <i class="glyphicon glyphicon-cloud"></i>GitHub</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-            </div>
-            <div class="hg-right">
-                <div class="hg-right-main">
-                </div>
-            </div>
-            <script type="text/javascript" src="./js/jquery.scrollTo.js"></script>
-            <script type="text/javascript" src="./js/index.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#slide1"]', {
+            speed: 2000
+        });
+        var scroll = new SmoothScroll('a[href*="#slide2"]', {
+            speed: 2000
+        });
+        var scroll = new SmoothScroll('a[href*="#slide3"]', {
+            speed: 2000
+        });
+        var scroll = new SmoothScroll('a[href*="#slide4"]', {
+            speed: 2000
+        });
+    </script>
+    <script type="text/javascript" src="./js/index.js"></script>
 </body>
 
 </html>

@@ -51,7 +51,7 @@ p {
   float: left;
   line-height: 70px;
   text-transform: uppercase;
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 .brand a,
 .brand a:visited {
@@ -75,6 +75,7 @@ nav ul {
 nav ul li {
   float: left;
   position: relative;
+  font-size: 1.3em;
 }
 nav ul li a,
 nav ul li a:visited {
@@ -115,7 +116,6 @@ nav ul li ul li a {
   position: absolute;
   top: 0;
   right: 0;
-  /* background: #262626; */
   height: 70px;
   width: 70px;
 }
@@ -196,7 +196,7 @@ nav ul li ul li a {
   text-align: center;
 }
 .about-content {
-  padding: 5%;
+  padding: 1%;
 }
 @media screen and (max-width: 798px){
   .flex-center {
@@ -206,52 +206,52 @@ nav ul li ul li a {
       background:url('../img/slide3.jpg') fixed;
     }
 }
+hr {
+  border-color: rgb(13, 36, 238);
+  border-width: 3px;
+  max-width: 50px;
+}
+hr.light {
+  border-color: rgb(253, 253, 253);
+}
 #slide1 {
   background:url('../img/slide3.jpg') 50% 0 no-repeat fixed;
   color: #fff;
-  height: 500px;
+  height: 950px;
   margin: 0;
-  padding: 200px 0 260px 0;
+  padding: 100px 0 260px 0;
   background-size: cover;
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
 #slide2 {
   background: url('../img/slide3.jpg') 50% 0 no-repeat fixed;
+  background: rgba(176, 177, 179, 0.575);
   color: #fff;
-  height: 700px;
+  height: 1100px;
   margin: 0;
-  padding: 200px 0 260px 0;
+  padding: 200px 0 206px 0;
   background-size: cover;
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
 #slide3 {
   background: url('../img/slide3.jpg') 50% 0 no-repeat fixed;
   color: #fff;
-  height: 1565px;
+  height: 800;
   margin: 0;
-  padding: 200px 0 300px 0;
+  padding: 300px 0 300px 0;
   background-size: cover;
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
 #slide4 {
   background: url('../img/slide3.jpg') 50% 0 no-repeat fixed;
+  background: rgba(176, 177, 179, 0.575);
   color: #fff;
-  height: 600px;
+  height: 800px;
   margin: 0;
   padding: 200px 0 260px 0;
   background-size: cover;
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
-#slide5 {
-  background: url('../img/slide3.jpg') 50% 0 no-repeat fixed;
-  height: 200px;
-  margin: 0 auto;
-  padding: 250px 0;
-  color: rgb(255, 255, 255);
-  background-size: cover;
-  text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
-}
-
 .gallery {
   padding-right: 50px;
     padding-left: 50px;
@@ -268,11 +268,9 @@ nav ul li ul li a {
     width: 1170px;
   }
 }
-
 #projects {
   text-align: center;
 }
-
 /* The Modal (background) */
 .modalssssss {
   display: none; /* Hidden by default */
@@ -287,7 +285,6 @@ nav ul li ul li a {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
-
 /* Add Animation */
 #modal-content{
   margin: auto;
@@ -303,8 +300,6 @@ nav ul li ul li a {
   animation-name: zoom;
   animation-duration: 0.6s;
 }
-/*  */
-
 .modalDialog {
   position: fixed;
   width: 100%;
@@ -323,27 +318,26 @@ nav ul li ul li a {
   animation-duration: 0.6s;
   pointer-events: none;
 }
-
 .modalDialog:target {
   opacity:1;
   pointer-events: auto;
 }
-
 .modalDialog > div {
   position: relative;
-  /* margin: 10% auto; */
   padding: 5px 20px 13px 20px;
   border-radius: 10px;
   background: #fff;
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+  width: 92%;
+  height: 90%;
   background: -moz-linear-gradient(#fff, #999);
   background: -webkit-linear-gradient(#fff, #999);
   background: -o-linear-gradient(#fff, #999);
 }
-
+img{
+  border-radius: 10px;
+}
 .close {
   z-index: 99999;
   opacity:0;
@@ -364,24 +358,17 @@ nav ul li ul li a {
   -webkit-box-shadow: 1px 1px 3px #000;
   box-shadow: 1px 1px 3px #000;
 }
-
-.close:hover { background: #00d9ff; }
-
-
-
-/*  */
-
-
+.close:hover { 
+  background: #00d9ff;
+}
 @-webkit-keyframes zoom {
   from {-webkit-transform:scale(0)} 
   to {-webkit-transform:scale(1)}
 }
-
 @keyframes zoom {
   from {transform:scale(0)} 
   to {transform:scale(1)}
 }
-
 /* The Close Button */
 .close-btn {
   background: #00d9ff;
@@ -394,17 +381,25 @@ nav ul li ul li a {
   transition: 0.3s;
   text-shadow: 0 1px 0 rgb(237, 234, 234), 0 2px 0 #c9c8c8, 0 3px 0 rgb(179, 177, 177), 0 4px 0 #cbcaca, 0 5px 0 rgb(216, 214, 214);
 }
-
 #close-btn:hover,
 #close-btn:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
 }
-
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
   .modal-content {
       width: 100%;
   }
 }
+.glyphicon-wrapper{
+  font-size: 2.5em;
+  color: #5e98e4;
+}
+
+.glyphicon-wrapper-nav {
+  font-size: 1.0em;
+  color: #5e98e4;
+}
+
