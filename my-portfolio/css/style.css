@@ -294,29 +294,6 @@ hr.light {
 #projects {
   text-align: center;
 }
-/*
- * FadeIn animation
-*/
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
 /* Add Animation */
 .modal-content {
   margin: auto;
@@ -325,16 +302,6 @@ hr.light {
   height: 100%;
   overflow: auto;
 }
-/* .modal-content,
-.caption {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-  transition: box-shadow .25s linear, margin-top .15s linear, background-color .25s linear;
-} */
 .modalDialog {
   position: fixed;
   width: 100%;
@@ -395,22 +362,6 @@ img {
 .close:hover {
   background: #00d9ff;
 }
-@-webkit-keyframes zoom {
-  from {
-    -webkit-transform: scale(0)
-  }
-  to {
-    -webkit-transform: scale(1)
-  }
-}
-@keyframes zoom {
-  from {
-    transform: scale(0)
-  }
-  to {
-    transform: scale(1)
-  }
-}
 /* The Close Button */
 .close-btn {
   background: #00d9ff;
@@ -431,8 +382,41 @@ img {
 }
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px) {
+  #slide1 {
+    font-family: 'Ubuntu', sans-serif;
+    background: url('../img/slide3.jpg') 50% 0 no-repeat fixed;
+    background: rgba(176, 177, 179, 0.575);
+    color: #fff;
+    height: 1100px;
+    margin: 0;
+    padding: 200px 0 306px 0;
+    background-size: cover;
+    text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+  }
+  #slide3 {
+    font-family: 'Ubuntu', sans-serif;
+    background: url('../img/slide3.jpg') 50% 0 no-repeat fixed;
+    background: rgba(176, 177, 179, 0.575);
+    color: #fff;
+    height: 1100px;
+    margin: 0;
+    padding: 200px 0 306px 0;
+    background-size: cover;
+    text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+  }
   .modal-content {
+
     width: 100%;
+    height: 55%;
+  }
+   .modal-dialog{
+
+    width: 80%;
+    height: 80%;
+  }
+   .modalDialog>div{
+    width: 87%;
+    height: 70%;
   }
 }
 .glyphicon-wrapper {
@@ -464,50 +448,10 @@ button {
   vertical-align: middle;
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
-/* button {
-  background-color: rgba(191, 200, 216, 0.671);
-  border-radius: 15px;
-  padding: 13px 26px;
-
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
-  color: #000000;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #fff;
-  border: 1px solid #a7a7a7;
-
-  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
-  text-shadow: 0 1px 0 rgb(18, 18, 18), 0 1px 0 #292929, 0 0px 0 rgb(9, 9, 9), 0 0px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 5px 5px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
-  -webkit-transition: box-shadow 0.5s;
-} */
-
 .btn-wrapper {
   text-align: center;
   margin: 0;
   padding: 0;
-}
-/*
-* FadeOut animation
-*/
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.fadeOut {
-  -webkit-animation-name: fadeOut;
-  animation-name: fadeOut;
 }
 .contact-items-wrapper{
   border-top: 1px solid #96d1f8;
