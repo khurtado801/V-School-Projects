@@ -3,26 +3,21 @@
   content: " ";
   display: table;
 }
-
 .clearfix:after {
   clear: both;
 }
-
 .clearfix {
   *zoom: 1;
 }
-
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   font-family: 'Ubuntu', sans-serif;
 }
-
 p {
   font-family: 'Ubuntu', sans-serif;
 }
-
 #header1 {
   font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
@@ -32,7 +27,6 @@ p {
   margin: 0;
   padding: 0;
 }
-
 #header2 {
   font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
@@ -42,7 +36,6 @@ p {
   margin: 0;
   padding: 0;
 }
-
 #header3 {
   font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
@@ -52,7 +45,16 @@ p {
   margin: 0;
   padding: 0;
 }
-
+.greeting-item {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  padding-top: 10px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  background: url('../img/header-bg.png');
+}
 .navigation {
   font-family: 'Ubuntu', sans-serif;
   width: 100%;
@@ -61,7 +63,6 @@ p {
   text-shadow: 0 1px 0 rgb(65, 65, 65), 0 2px 0 #292929, 0 3px 0 rgb(0, 0, 0), 0 4px 0 #22222290, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 5px 5px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
   position: fixed;
 }
-
 .brand {
   font-family: 'Ubuntu', sans-serif;
   position: absolute;
@@ -71,35 +72,29 @@ p {
   text-transform: uppercase;
   font-size: 1.5em;
 }
-
 .brand a,
 .brand a:visited {
   color: #ffffff;
   text-decoration: none;
 }
-
 .nav-container {
   max-width: 1000px;
   margin: 0 auto;
 }
-
 nav {
   float: right;
   font-weight: bold;
 }
-
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 nav ul li {
   float: left;
   position: relative;
   font-size: 1.3em;
 }
-
 nav ul li a,
 nav ul li a:visited {
   display: block;
@@ -108,37 +103,30 @@ nav ul li a:visited {
   color: #ffffff;
   text-decoration: none;
 }
-
 nav ul li a:hover,
 nav ul li a:visited:hover {
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
   color: #ffffff;
 }
-
 nav ul li a:not(:only-child):after,
 nav ul li a:visited:not(:only-child):after {
   padding-left: 4px;
   content: ' ▾';
 }
-
 nav ul li ul li {
   min-width: 190px;
 }
-
 nav ul li ul li a {
   padding: 15px;
   line-height: 20px;
 }
-
 .nav-dropdown {
   position: absolute;
   display: none;
   z-index: 1;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
-
 /* Mobile navigation */
-
 .nav-mobile {
   display: none;
   position: absolute;
@@ -147,7 +135,6 @@ nav ul li ul li a {
   height: 70px;
   width: 70px;
 }
-
 @media only screen and (max-width: 798px) {
   .nav-mobile {
     display: block;
@@ -174,13 +161,11 @@ nav ul li ul li a {
     position: static;
   }
 }
-
 @media screen and (min-width: 799px) {
   .nav-list {
     display: block !important;
   }
 }
-
 #nav-toggle {
   position: absolute;
   left: 18px;
@@ -188,7 +173,6 @@ nav ul li ul li a {
   cursor: pointer;
   padding: 10px 35px 16px 0px;
 }
-
 #nav-toggle span,
 #nav-toggle span:before,
 #nav-toggle span:after {
@@ -202,42 +186,33 @@ nav ul li ul li a {
   content: '';
   transition: all 300ms ease-in-out;
 }
-
 #nav-toggle span:before {
   top: -10px;
 }
-
 #nav-toggle span:after {
   bottom: -10px;
 }
-
 #nav-toggle.active span {
   background-color: transparent;
 }
-
 #nav-toggle.active span:before,
 #nav-toggle.active span:after {
   top: 0;
 }
-
 #nav-toggle.active span:before {
   transform: rotate(45deg);
 }
-
 #nav-toggle.active span:after {
   transform: rotate(-45deg);
 }
-
 .flex-center {
   display: flex;
   justify-content: center;
   text-align: center;
 }
-
 .about-content {
   padding: 1%;
 }
-
 @media screen and (max-width: 798px) {
   .flex-center {
     display: block;
@@ -246,19 +221,16 @@ nav ul li ul li a {
     background: url('../img/slide3.jpg') fixed;
   }
 }
-
 hr {
   border-color: rgb(13, 36, 238);
   border-width: 1px;
   max-width: 50px;
 }
-
 hr.light {
   border-color: rgb(253, 253, 253);
   border-width: 1px;
   max-width: 50px;
 }
-
 #slide1 {
   font-family: 'Ubuntu', sans-serif;
   background: url('../img/slide3.jpg') 50% 0 no-repeat fixed;
@@ -269,7 +241,6 @@ hr.light {
   background-size: cover;
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
-
 #slide2 {
   font-family: 'Ubuntu', sans-serif;
   background: url('../img/slide3.jpg') 50% 0 no-repeat fixed;
@@ -281,7 +252,6 @@ hr.light {
   background-size: cover;
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
-
 #slide3 {
   font-family: 'Ubuntu', sans-serif;
   background: url('../img/slide3.jpg') 50% 0 no-repeat fixed;
@@ -292,7 +262,6 @@ hr.light {
   background-size: cover;
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
-
 #slide4 {
   font-family: 'Ubuntu', sans-serif;
   background: url('../img/slide3.jpg') 50% 0 no-repeat fixed;
@@ -304,7 +273,6 @@ hr.light {
   background-size: cover;
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
-
 .gallery {
   padding-right: 50px;
   padding-left: 50px;
@@ -313,27 +281,22 @@ hr.light {
   text-align: center;
   cursor: pointer;
 }
-
 .gallery div {
   display: inline-block;
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
-
 @media (min-width: 1200px) {
   .gallery {
     width: 1170px;
   }
 }
-
 #projects {
   text-align: center;
 }
-
 /*
  * FadeIn animation
 */
-
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -342,7 +305,6 @@ hr.light {
     opacity: 1;
   }
 }
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -351,23 +313,18 @@ hr.light {
     opacity: 1;
   }
 }
-
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
-
 /* Add Animation */
-
 .modal-content {
   margin: auto;
-  padding-top: 90px;
   display: block;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
-
 /* .modal-content,
 .caption {
   -webkit-animation-name: fadeIn;
@@ -378,7 +335,6 @@ hr.light {
   animation-duration: 0.6s;
   transition: box-shadow .25s linear, margin-top .15s linear, background-color .25s linear;
 } */
-
 .modalDialog {
   position: fixed;
   width: 100%;
@@ -392,13 +348,14 @@ hr.light {
   z-index: 99999;
   opacity: 0;
   pointer-events: none;
+  padding-bottom: 5%;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
-
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
-
 .modalDialog>div {
   position: relative;
   padding: 5px 20px 13px 20px;
@@ -412,11 +369,9 @@ hr.light {
   background: -webkit-linear-gradient(#fff, #999);
   background: -o-linear-gradient(#fff, #999);
 }
-
 img {
   border-radius: 10px;
 }
-
 .close {
   z-index: 99999;
   opacity: 0;
@@ -437,11 +392,9 @@ img {
   -webkit-box-shadow: 1px 1px 3px #000;
   box-shadow: 1px 1px 3px #000;
 }
-
 .close:hover {
   background: #00d9ff;
 }
-
 @-webkit-keyframes zoom {
   from {
     -webkit-transform: scale(0)
@@ -450,7 +403,6 @@ img {
     -webkit-transform: scale(1)
   }
 }
-
 @keyframes zoom {
   from {
     transform: scale(0)
@@ -459,9 +411,7 @@ img {
     transform: scale(1)
   }
 }
-
 /* The Close Button */
-
 .close-btn {
   background: #00d9ff;
   position: absolute;
@@ -473,32 +423,26 @@ img {
   transition: 0.3s;
   text-shadow: 0 1px 0 rgb(237, 234, 234), 0 2px 0 #c9c8c8, 0 3px 0 rgb(179, 177, 177), 0 4px 0 #cbcaca, 0 5px 0 rgb(216, 214, 214);
 }
-
 #close-btn:hover,
 #close-btn:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
 }
-
 /* 100% Image Width on Smaller Screens */
-
 @media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
   }
 }
-
 .glyphicon-wrapper {
   font-size: 2.5em;
   color: #5e98e4;
 }
-
 .glyphicon-wrapper-nav {
   font-size: 1.0em;
   color: #5e98e4;
 }
-
 button {
   border-top: 1px solid #96d1f8;
   background-color: rgba(191, 200, 216, 0.671);
@@ -511,16 +455,15 @@ button {
   -webkit-border-radius: 29px;
   -moz-border-radius: 29px;
   border-radius: 29px;
-  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-  box-shadow: rgba(0,0,0,1) 0 1px 0;
-  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
   font-family: 'Ubuntu', sans-serif;
   text-decoration: none;
   vertical-align: middle;
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
-  }
-
+}
 /* button {
   background-color: rgba(191, 200, 216, 0.671);
   border-radius: 15px;
@@ -543,11 +486,9 @@ button {
   margin: 0;
   padding: 0;
 }
-
 /*
 * FadeOut animation
 */
-
 @-webkit-keyframes fadeOut {
   0% {
     opacity: 1;
@@ -556,7 +497,6 @@ button {
     opacity: 0;
   }
 }
-
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -565,12 +505,10 @@ button {
     opacity: 0;
   }
 }
-
 .fadeOut {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
 }
-
 .contact-items-wrapper{
   border-top: 1px solid #96d1f8;
   background-color: rgba(191, 200, 216, 0.671);
@@ -583,10 +521,10 @@ button {
   -webkit-border-radius: 29px;
   -moz-border-radius: 29px;
   border-radius: 29px;
-  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-  box-shadow: rgba(0,0,0,1) 0 1px 0;
-  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
   font-family: 'Ubuntu', sans-serif;
   text-decoration: none;
 }
