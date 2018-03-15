@@ -1,32 +1,38 @@
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
+
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
+
 .clearfix {
-    *zoom: 1;
+  *zoom: 1;
 }
-body{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-family: 'Ubuntu', sans-serif;
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
 }
+
 p {
   font-family: 'Ubuntu', sans-serif;
 }
+
 #header1 {
   font-family: 'Ubuntu', sans-serif;
-  font-weight:normal;
+  font-weight: normal;
   font-size: 55px;
   text-align: center;
   color: #fff;
   margin: 0;
   padding: 0;
 }
+
 #header2 {
   font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
@@ -36,6 +42,7 @@ p {
   margin: 0;
   padding: 0;
 }
+
 #header3 {
   font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
@@ -45,6 +52,7 @@ p {
   margin: 0;
   padding: 0;
 }
+
 .navigation {
   font-family: 'Ubuntu', sans-serif;
   width: 100%;
@@ -53,6 +61,7 @@ p {
   text-shadow: 0 1px 0 rgb(65, 65, 65), 0 2px 0 #292929, 0 3px 0 rgb(0, 0, 0), 0 4px 0 #22222290, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 5px 5px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
   position: fixed;
 }
+
 .brand {
   font-family: 'Ubuntu', sans-serif;
   position: absolute;
@@ -62,67 +71,74 @@ p {
   text-transform: uppercase;
   font-size: 1.5em;
 }
+
 .brand a,
 .brand a:visited {
   color: #ffffff;
   text-decoration: none;
 }
+
 .nav-container {
   max-width: 1000px;
   margin: 0 auto;
 }
-/* a {
-  color: whitesmoke;
-} */
+
 nav {
   float: right;
-  font-weight: bold; 
-  
+  font-weight: bold;
 }
+
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 nav ul li {
   float: left;
   position: relative;
   font-size: 1.3em;
 }
+
 nav ul li a,
 nav ul li a:visited {
   display: block;
   padding: 0 20px;
   line-height: 70px;
-  /* background: #262626; */
   color: #ffffff;
   text-decoration: none;
 }
+
 nav ul li a:hover,
 nav ul li a:visited:hover {
-  /* background: #2581DC; */
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
   color: #ffffff;
 }
+
 nav ul li a:not(:only-child):after,
 nav ul li a:visited:not(:only-child):after {
   padding-left: 4px;
   content: ' ▾';
 }
+
 nav ul li ul li {
   min-width: 190px;
 }
+
 nav ul li ul li a {
   padding: 15px;
   line-height: 20px;
 }
+
 .nav-dropdown {
   position: absolute;
   display: none;
   z-index: 1;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
+
 /* Mobile navigation */
+
 .nav-mobile {
   display: none;
   position: absolute;
@@ -131,6 +147,7 @@ nav ul li ul li a {
   height: 70px;
   width: 70px;
 }
+
 @media only screen and (max-width: 798px) {
   .nav-mobile {
     display: block;
@@ -149,21 +166,21 @@ nav ul li ul li a {
   nav ul li a {
     padding: 15px;
     line-height: 20px;
-    
   }
   nav ul li ul li a {
     padding-left: 30px;
-
   }
-.nav-dropdown {
+  .nav-dropdown {
     position: static;
   }
 }
+
 @media screen and (min-width: 799px) {
   .nav-list {
     display: block !important;
   }
 }
+
 #nav-toggle {
   position: absolute;
   left: 18px;
@@ -171,6 +188,7 @@ nav ul li ul li a {
   cursor: pointer;
   padding: 10px 35px 16px 0px;
 }
+
 #nav-toggle span,
 #nav-toggle span:before,
 #nav-toggle span:after {
@@ -184,53 +202,66 @@ nav ul li ul li a {
   content: '';
   transition: all 300ms ease-in-out;
 }
+
 #nav-toggle span:before {
   top: -10px;
 }
+
 #nav-toggle span:after {
   bottom: -10px;
 }
+
 #nav-toggle.active span {
   background-color: transparent;
 }
-#nav-toggle.active span:before, #nav-toggle.active span:after {
+
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
   top: 0;
 }
+
 #nav-toggle.active span:before {
   transform: rotate(45deg);
 }
+
 #nav-toggle.active span:after {
   transform: rotate(-45deg);
 }
+
 .flex-center {
   display: flex;
   justify-content: center;
   text-align: center;
 }
+
 .about-content {
   padding: 1%;
 }
-@media screen and (max-width: 798px){
+
+@media screen and (max-width: 798px) {
   .flex-center {
-      display: block;
-    }
-    body {
-      background:url('../img/slide3.jpg') fixed;
-    }
+    display: block;
+  }
+  body {
+    background: url('../img/slide3.jpg') fixed;
+  }
 }
+
 hr {
   border-color: rgb(13, 36, 238);
   border-width: 1px;
   max-width: 50px;
 }
+
 hr.light {
   border-color: rgb(253, 253, 253);
   border-width: 1px;
   max-width: 50px;
 }
+
 #slide1 {
   font-family: 'Ubuntu', sans-serif;
-  background:url('../img/slide3.jpg') 50% 0 no-repeat fixed;
+  background: url('../img/slide3.jpg') 50% 0 no-repeat fixed;
   color: #fff;
   height: 950px;
   margin: 0;
@@ -238,6 +269,7 @@ hr.light {
   background-size: cover;
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
+
 #slide2 {
   font-family: 'Ubuntu', sans-serif;
   background: url('../img/slide3.jpg') 50% 0 no-repeat fixed;
@@ -245,20 +277,22 @@ hr.light {
   color: #fff;
   height: 1100px;
   margin: 0;
-  padding: 200px 0 206px 0;
+  padding: 200px 0 306px 0;
   background-size: cover;
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
+
 #slide3 {
   font-family: 'Ubuntu', sans-serif;
   background: url('../img/slide3.jpg') 50% 0 no-repeat fixed;
   color: #fff;
   height: 800;
   margin: 0;
-  padding: 300px 0 300px 0;
+  padding: 150px 0 260px 0;
   background-size: cover;
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
+
 #slide4 {
   font-family: 'Ubuntu', sans-serif;
   background: url('../img/slide3.jpg') 50% 0 no-repeat fixed;
@@ -270,31 +304,62 @@ hr.light {
   background-size: cover;
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
+
 .gallery {
   padding-right: 50px;
-    padding-left: 50px;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    cursor: pointer;
+  padding-left: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  cursor: pointer;
 }
+
 .gallery div {
   display: inline-block;
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
 
-
 @media (min-width: 1200px) {
   .gallery {
     width: 1170px;
   }
 }
+
 #projects {
   text-align: center;
 }
+
+/*
+ * FadeIn animation
+*/
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
 /* Add Animation */
-.modal-content{
+
+.modal-content {
   margin: auto;
   padding-top: 90px;
   display: block;
@@ -302,37 +367,39 @@ hr.light {
   height: 100%;
   overflow: hidden;
 }
-.modal-content, .caption {    
+
+/* .modal-content,
+.caption {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
   animation-duration: 0.6s;
-}
+  transition: box-shadow .25s linear, margin-top .15s linear, background-color .25s linear;
+} */
+
 .modalDialog {
   position: fixed;
   width: 100%;
-  height:100%;
+  height: 100%;
   font-family: 'Ubuntu', sans-serif;
   top: 20px;
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 99999;
-  opacity:0;
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
+  opacity: 0;
   pointer-events: none;
-  /* -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out; */
 }
+
 .modalDialog:target {
-  opacity:1;
+  opacity: 1;
   pointer-events: auto;
 }
-.modalDialog > div {
+
+.modalDialog>div {
   position: relative;
   padding: 5px 20px 13px 20px;
   border-radius: 10px;
@@ -344,15 +411,15 @@ hr.light {
   background: -moz-linear-gradient(#fff, #999);
   background: -webkit-linear-gradient(#fff, #999);
   background: -o-linear-gradient(#fff, #999);
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
 }
-img{
+
+img {
   border-radius: 10px;
 }
+
 .close {
   z-index: 99999;
-  opacity:0;
+  opacity: 0;
   background: #00d9ff;
   color: #FFFFFF;
   line-height: 25px;
@@ -370,18 +437,31 @@ img{
   -webkit-box-shadow: 1px 1px 3px #000;
   box-shadow: 1px 1px 3px #000;
 }
-.close:hover { 
+
+.close:hover {
   background: #00d9ff;
 }
+
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
+  from {
+    -webkit-transform: scale(0)
+  }
+  to {
+    -webkit-transform: scale(1)
+  }
 }
+
 @keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
 }
+
 /* The Close Button */
+
 .close-btn {
   background: #00d9ff;
   position: absolute;
@@ -393,26 +473,32 @@ img{
   transition: 0.3s;
   text-shadow: 0 1px 0 rgb(237, 234, 234), 0 2px 0 #c9c8c8, 0 3px 0 rgb(179, 177, 177), 0 4px 0 #cbcaca, 0 5px 0 rgb(216, 214, 214);
 }
+
 #close-btn:hover,
 #close-btn:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
 }
+
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+
+@media only screen and (max-width: 700px) {
   .modal-content {
-      width: 100%;
+    width: 100%;
   }
 }
-.glyphicon-wrapper{
+
+.glyphicon-wrapper {
   font-size: 2.5em;
   color: #5e98e4;
 }
+
 .glyphicon-wrapper-nav {
   font-size: 1.0em;
   color: #5e98e4;
 }
+
 button {
   border-top: 1px solid #96d1f8;
   background-color: rgba(191, 200, 216, 0.671);
@@ -434,9 +520,53 @@ button {
   vertical-align: middle;
   text-shadow: 0 1px 0 rgb(18, 18, 18), 0 2px 0 #292929, 0 3px 0 rgb(9, 9, 9), 0 4px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
   }
+
+/* button {
+  background-color: rgba(191, 200, 216, 0.671);
+  border-radius: 15px;
+  padding: 13px 26px;
+
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #fff;
+  border: 1px solid #a7a7a7;
+
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 0 rgb(18, 18, 18), 0 1px 0 #292929, 0 0px 0 rgb(9, 9, 9), 0 0px 0 #1f1f1f, 0 5px 0 rgb(69, 68, 68), 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 5px 5px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+  -webkit-transition: box-shadow 0.5s;
+} */
+
 .btn-wrapper {
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
+/*
+* FadeOut animation
+*/
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
