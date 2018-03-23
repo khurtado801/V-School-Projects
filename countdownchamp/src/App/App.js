@@ -7,12 +7,13 @@ export default class App extends Component {
     super(props);
     // Initial state of component
     this.state = {
-      deadline: 'December 25, 2017'
+      deadline: 'December 25, 2017',
+      newDeadline: '',
     };
   }
 
 changeDeadline = () => {
-  this.setState({ deadline: 'November 25, 2017' });
+  this.setState({ deadline: this.state.newDeadline }); // set orignal deadline to new deadline within state
 }
 
 render() {
@@ -28,8 +29,14 @@ render() {
           <div className="Clock-seconds" >20 Seconds</div>
         </div>
         <div>
-          <input placeholder='new date' />
-          <button>Submit</button>
+          <input
+            placeholder='new date'
+            onChange={ event => this.setState({ newDeadline: event.target.value }) }
+          />
+          { /* es6 anonymous function */ }
+          <button onClick={ () => this.changeDeadline() }>
+            Submit
+          </button>
         </div>
       </div>
   );
