@@ -1,4 +1,7 @@
+// eslint-disable-next-line
 import React, { Component } from 'react';
+
+import Clock from './Clock/Clock';
 
 import './App.css';
 
@@ -12,25 +15,24 @@ export default class App extends Component {
     };
   }
 
-changeDeadline = () => {
-  this.setState({ deadline: this.state.newDeadline }); // set orignal deadline to new deadline within state
-}
+  changeDeadline = () => {
+    // set orignal deadline to new deadline within state
+    this.setState({ deadline: this.state.newDeadline });
+  }
 
-render() {
-  return (
+  render() {
+    return (
       <div className="App">
         <div className="App-title ">
           Countdown to { this.state.deadline }
         </div>
-        <div>
-          <div className="Clock-days" >14 Days</div>
-          <div className="Clock-hours" >30 Hours</div>
-          <div className="Clock-minutes" >15 Miuntes</div>
-          <div className="Clock-seconds" >20 Seconds</div>
-        </div>
+        { /* pass deadline from parent application state to
+        the clock which can now recognize deadline as props */ }
+          <Clock deadline={ this.state.deadline }/>
         <div>
           <input
             placeholder='new date'
+            // Set state object property 'newDeadline' to value entered into the input field
             onChange={ event => this.setState({ newDeadline: event.target.value }) }
           />
           { /* es6 anonymous function */ }
@@ -39,6 +41,6 @@ render() {
           </button>
         </div>
       </div>
-  );
-}
+    );
+  }
 }
