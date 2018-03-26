@@ -2,7 +2,7 @@
 
 import {ADD_REMINDER} from '../constants';
 
-export const addRemonder = (text) => {
+export const addReminder = (text) => {
     const action = {
         type: ADD_REMINDER,
         text: text
