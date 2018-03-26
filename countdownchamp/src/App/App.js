@@ -10,7 +10,7 @@ export default class App extends Component {
     super(props);
     // Initial state of component
     this.state = {
-      deadline: 'December 25, 2017',
+      deadline: 'December 25, 2018',
       newDeadline: '',
     };
   }
