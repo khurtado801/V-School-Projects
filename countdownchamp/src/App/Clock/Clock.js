@@ -25,6 +25,7 @@ export default class Clock extends Component {
   }
 
   leading0(num) {
+    // Check if num is less than 10, if so print 0 and then num, if not diplay num
     return num < 10 ? '0' + num: num;
   }
 
@@ -42,6 +43,7 @@ export default class Clock extends Component {
   }
 
   render() {
+    console.log('deadline', this.state.deadline);
     return (
       <div>
         <div className="Clock-days">{this.leading0(this.state.days)} days</div>
@@ -52,6 +54,3 @@ export default class Clock extends Component {
     );
   }
 }
-
-// stopped at 5:10
-// https://www.udemy.com/react-js-and-redux-mastering-web-apps/learn/v4/t/lecture/6378964?start=0
