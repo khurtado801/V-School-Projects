@@ -10,9 +10,28 @@ class App extends Component {
         }
     }
 
-    addReminder() {
+    addReminder = () => {
         // console.log('this of addReminder', this);
         this.props.addReminder(this.state.text);
+    }
+
+    renderReminders = () => {
+        // Returns unordered list of reminders submitted by user
+        const { reminders } = this.props;
+        return (
+            <ul className="list-group col-sm-4">
+                {/* map over reminders to render each reminder individually as another list component*/}
+                {
+                    reminders.map(reminder => {
+                        return (
+                            <li key={reminder.id} className="list-group-item">
+                                <div>{reminder.text}</div>
+                            </li>
+                        )
+                    })
+                }
+            </ul>
+        )
     }
 
     render() {
@@ -21,7 +40,7 @@ class App extends Component {
                 <div className="title">
                     Reminder
                 </div>
-                <div className="form-inline">
+                <div className="form-inline reminder-form">
                     <div className="form-group">
                         <input 
                             className="form-control" type="text"
@@ -34,14 +53,18 @@ class App extends Component {
                     >
                     Add reminder</button>
                 </div>
+                { this.renderReminders() }
             </div>
         )
     }
 }
 
-// function  mapDispatchToProps(dispatch) {
-//     return bindActionCreators({addReminder}, dispatch);
-// }
+function mapStateToProps (state) {
+    return {
+        reminders: state
+    }
+}
 
-export default connect(null, { addReminder })(App);
+// Pass mapStateToProps to our connect function
+export default connect(mapStateToProps, { addReminder })(App);
 
