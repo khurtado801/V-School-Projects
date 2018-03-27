@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import { addReminder } from '../../actions/index';
+import { addReminder,deleteReminder } from '../../actions/index';
 
 class App extends Component {
     constructor(props) {
@@ -15,6 +15,11 @@ class App extends Component {
         this.props.addReminder(this.state.text);
     }
 
+    deleteReminder = (id) => {
+        console.log('deleting in application', id);
+        console.log('this.props', this.props)
+    }
+
     renderReminders = () => {
         // Returns unordered list of reminders submitted by user
         const { reminders } = this.props;
@@ -25,7 +30,10 @@ class App extends Component {
                     reminders.map(reminder => {
                         return (
                             <li key={reminder.id} className="list-group-item">
-                                <div>{reminder.text}</div>
+                                <div className="list-item">{reminder.text}</div>
+                                <div className="list-item delete-button" onClick={() => this.deleteReminder(reminder.id)}>
+                                    &#x2715;
+                                </div>
                             </li>
                         )
                     })
@@ -36,35 +44,34 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <div className="title">
-                    Reminder
-                </div>
-                <div className="form-inline reminder-form">
-                    <div className="form-group">
-                        <input 
-                            className="form-control" type="text"
-                            placeholder="I have to..." 
-                            onChange={event => this.setState({text: event.target.value})}
-                        />
+            <div className="app-wrapper">
+                <div className="App">
+                    {/* <div className="title">
+                        Reminder
+                    </div> */}
+                    <div className="form-inline reminder-form">
+                        <div className="form-group">
+                            <input
+                                className="form-control" type="text"
+                                placeholder="I have to..."
+                                onChange={event => this.setState({ text: event.target.value })}
+                            />
+                        </div>
+                        <button type="button" className="btn btn-success" onClick={() => this.addReminder()}>Add reminder</button>
                     </div>
-                    <button type="button" className="btn btn-success"
-                    onClick={() => this.addReminder()}
-                    >
-                    Add reminder</button>
+                    {this.renderReminders()}
                 </div>
-                { this.renderReminders() }
             </div>
         )
     }
 }
 
-function mapStateToProps (state) {
+function mapStateToProps(state) {
     return {
         reminders: state
     }
 }
 
 // Pass mapStateToProps to our connect function
-export default connect(mapStateToProps, { addReminder })(App);
+export default connect(mapStateToProps, { addReminder, deleteReminder })(App);
 
