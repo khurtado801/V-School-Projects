@@ -1,17 +1,12 @@
 // Root for our reduces
-import characters_json from '../data/characters.json';
-import { ADD_CHARACTER } from '../actions';
+import { combineReducers } from 'redux';
 
-// Characters reducer
-function characters(state = characters_json, action) {
-  // Switch is actual reducing part
-  switch (action.type) {
-    case ADD_CHARACTER:
-      let characters = state.filter(item => item.id !== action.id);
-      return characters;
-    default:
-      return state;
-  }
-}
+import characters from './characters_reducer';
+import heroes from './heroes_reducer';
 
-export default characters;
+const rootReducer = combineReducers({
+  characters,
+  heroes
+});
+
+export default rootReducer;

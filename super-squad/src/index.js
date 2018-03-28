@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { addCharacterById } from './actions';
 import App from './components/App/App';
 import rootReducer from './reducers';
+import './index.css';
 
 
 const store = createStore(rootReducer);

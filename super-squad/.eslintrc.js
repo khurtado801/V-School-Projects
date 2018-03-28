@@ -18,7 +18,9 @@ module.exports = {
           2,
           "single"
       ],
-      "no-console": 0,
+      "arrow-parens": 0,
+      "no-unused-vars": 0,
+      "no-console": "off",
       "prefer-const": 0,
       "no-shadow": 0,
       "no-case-declarations": 0,
