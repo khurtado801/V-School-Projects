@@ -1,11 +1,13 @@
 // actions/index.js
+// Action creator
 
 import {ADD_REMINDER, DELETE_REMINDER} from '../constants';
 
-export const addReminder = (text) => {
+export const addReminder = (text, dueDate) => {
     const action = {
         type: ADD_REMINDER,
-        text: text
+        text: text,
+        dueDate: dueDate
     }
     console.log('action in addReminder', action) // Used for debugging
     return action;
