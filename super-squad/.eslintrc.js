@@ -18,6 +18,12 @@ module.exports = {
           2,
           "single"
       ],
+      "no-console": 0,
+      "prefer-const": 0,
+      "no-shadow": 0,
+      "no-case-declarations": 0,
+      "no-undef": 0,
+      "import/prefer-default-export": 0,
       "no-trailing-spaces": 0,
       "camelcase": 0,
       "no-unused-vars": 0,
