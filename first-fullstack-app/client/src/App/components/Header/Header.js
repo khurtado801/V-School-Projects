@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
-import { Nav, NavItem} from 'reactstrap';  
+// import { Nav, NavItem } from 'reactstrap';  
 
 import './Header.css';
 import homeIcon from '../../../images/home8small.png'
