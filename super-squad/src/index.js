@@ -9,7 +9,6 @@ import App from './components/App/App';
 import rootReducer from './reducers';
 import './index.css';
 
-
 const store = createStore(rootReducer);
 console.log('store.getState()', store.getState());
 store.subscribe(() => console.log('store', store.getState()));
@@ -18,6 +17,6 @@ store.dispatch(addCharacterById(2));
 ReactDOM.render(
   <Provider store={ store }>
     <App />
-  </Provider>
-  , document.getElementById('root')
+  </Provider>,
+  document.getElementById('root')
 );
